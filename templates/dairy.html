@@ -1,0 +1,284 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EnPassant-fruits</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    
+    <style>
+        body {
+            background-color: WhiteSmoke;
+        }
+
+        table {
+            width: 29.8%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
+        .cart-info {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        th {
+            text-align: left;
+            padding: 5px;
+            color: #fff;
+            background: #ff523b;
+            font-weight: normal;
+        }
+
+        td {
+            padding: 10px 5px;
+        }
+
+        td input {
+            width: 40px;
+            height: 30px;
+            padding: 5px;
+        }
+
+        td a {
+            color: #ff523b;
+            font-size: 12px;
+        }
+
+        .total-price {
+            text-align: right;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .total_price table {
+            border-top: 3px sloid #ff523b;
+            width: 100%;
+            max-width: 350px;
+        }
+
+        td:last-child {
+            text-align: right;
+        }
+
+        th:last-child {
+            text-align: right;
+        }
+        .myfixed{
+            width:455.5px;
+            table-layout: fixed;
+        }
+        .myfixed tbody{
+            display:block;
+            width:456px;
+            overflow:scroll;
+            height:450px;
+
+            }
+            .myfixed thead th tr{
+                display:block;
+                
+            }
+            .myfixed th td{
+                width:400px;
+            }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <div class="container-fluid">
+                <div class="logo">
+                    <a style="color:white;" class="navbar-brand" href="/">En<em>Passant</em></a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/aboutus" style="color:white;margin-top: 8px;">About us</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" style="color:white;margin-top:7px" href="#" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                SECTIONS
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="/fruitstore">Fruits</a></li>
+                                <li><a class="dropdown-item" href="/vegetablestore">Vegetables</a></li>
+                                <li><a class="dropdown-item" href="/bakery">Bakery</a></li>
+                                <li><a class="dropdown-item" href="/snacks">Snacks</a></li>
+                                <li><a class="dropdown-item" href="/dairy">Dairy</a></li>
+                                <li><a class="dropdown-item" href="/toiletries">Toiletires</a></li>
+                                <li><a class="dropdown-item" href="/chicken">Chicken</a></li>
+                                <li><a class="dropdown-item" href="/mutton">Mutton</a></li>
+                                <li><a class="dropdown-item" href="/fish">Fish</a></li>
+                                <!--<li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>-->
+                            </ul>
+                        </li>
+
+
+
+                        <form class="d-flex" style="width:700px">
+                            <input class="form-control me-2" style="margin-top:7px;" type="search" placeholder="Search"
+                                aria-label="Search" style="width:200%">
+                            <button class="btn btn-outline-light" style="margin-top:7px;" type="submit">Search</button>
+                        </form>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" style="color:white;margin-top:7px;margin-left: 200px;" href="#"
+                                tabindex="-1" aria-disabled="true">EnPassant,your searches end here :)</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </div>
+     <img src="static/img/dairystoreim.jpeg" align="left" usemap="#image-map" height=658.4px width=70%>
+
+     <map name="image-map">
+        <area target="" alt="AMUL MILK CHOCLATE" title="AMUL MILK CHOCLATE" href="/AMUL MILK CHOCLATE" coords="352,78,351,147,506,147,510,74" shape="poly">
+        <area target="" alt="AMUL DARK CHOCLATE BIG" title="AMUL DARK CHOCLATE BIG" href="/AMUL DARK CHOCLATE BIG" coords="510,61,517,142,658,135,650,63" shape="poly">
+        <area target="" alt="AMUL DARK CHOCLATE SMALL" title="AMUL DARK CHOCLATE SMALL" href="/AMUL DARK CHOCLATE SMALL" coords="652,72,660,128,822,132,815,69" shape="poly">
+        <area target="" alt="AMUL ALMOND CHOCLATE GIFT PACK" title="AMUL ALMOND CHOCLATE GIFT PACK" href="/AMUL ALMOND CHOCLATE GIFT PACK" coords="330,209,333,241,391,241,389,209" shape="poly">
+        <area target="" alt="AMUL ALMOND CHOCLATE GIFT PACK BIG" title="AMUL ALMOND CHOCLATE GIFT PACK BIG" href="/AMUL ALMOND CHOCLATE GIFT PACK" coords="394,165,397,244,514,244,514,170" shape="poly">
+        <area target="" alt="AMUL VALENTINE SPECIAL CHOCLATE PACK" title="AMUL VALENTINE SPECIAL CHOCLATE PACK" href="/AMUL VALENTINE SPECIAL CHOCLATE PACK" coords="530,165,529,243,670,245,670,161" shape="poly">
+        <area target="" alt="AMUL DARK CHOCLATE SMALL" title="AMUL DARK CHOCLATE SMALL" href="/AMUL DARK CHOCLATE SMALL" coords="754,167,750,241,813,237,806,163" shape="poly">
+        <area target="" alt="AMUL SUGAR FREE CHOCLATE SMALL" title="AMUL SUGAR FREE CHOCLATE SMALL" href="/AMUL SUGAR FREE CHOCLATE SMALL" coords="699,169,682,170,686,235,698,239,745,238,747,166" shape="poly">
+        <area target="" alt="AMUL ALMOND CHOCLATE GIFT PACK" title="AMUL ALMOND CHOCLATE GIFT PACK" href="/AMUL ALMOND CHOCLATE GIFT PACK" coords="811,213,814,232,866,241,868,213" shape="poly">
+        <area target="" alt="AMUL ALMOND" title="AMUL ALMOND" href="/AMUL ALMOND" coords="0,198,-1,239,82,245,281,237,283,204,267,191" shape="poly">
+        <area target="" alt="AMUL GHEE" title="AMUL GHEE" href="/AMUL GHEE" coords="139,299,144,349,296,349,297,301" shape="poly">
+        <area target="" alt="AMUL MASTHI" title="AMUL MASTHI" href="/AMUL MASTHI" coords="654,466,655,551,768,554,761,485,745,457,686,459,686,469" shape="poly">
+        <area target="" alt="AMUL DARK PASSION" title="AMUL DARK PASSION" href="/AMUL DARK PASSION" coords="756,444,801,438,819,461,823,541,768,547,759,458,754,453" shape="poly">
+        <area target="" alt="AMUL PIZZA CHEESE BIG" title="AMUL PIZZA CHEESE BIG" href="/AMUL PIZZA CHEESE BIG" coords="653,391,661,435,789,430,785,387" shape="poly">
+        <area target="" alt="AMUL PIZZA CHEESE SMALL" title="AMUL PIZZA CHEESE SMALL" href="/AMUL PIZZA CHEESE BIG" coords="503,500,504,547,585,551,578,499,547,500" shape="poly">
+        <area target="" alt="AMUL LASSI" title="AMUL LASSI" href="/AMUL LASSI" coords="384,475,390,551,508,549,495,463,462,473" shape="poly">
+        <area target="" alt="AMUL DARK CHOCLATE SMALL" title="AMUL DARK CHOCLATE SMALL" href="/AMUL DARK CHOCLATE SMALL" coords="323,460,318,478,322,551,386,551,385,467" shape="poly">
+        <area target="" alt="AMUL CREAM" title="AMUL CREAM" href="/AMUL CREAM" coords="240,369,237,435,325,438,325,368" shape="poly">
+        <area target="" alt="AMUL PRO " title="AMUL PRO " href="/AMUL PRO" coords="122,375,122,441,235,440,240,371" shape="poly">
+        <area target="" alt="AMUL PRO SMALL BOTTLE" title="AMUL PRO SMALL BOTTLE" href="/AMUL PRO SMALL BOTTLE" coords="2,394,53,382,114,386,117,432,84,442,1,445" shape="poly">
+        <area target="" alt="AMUL GHEE SMALL" title="AMUL GHEE SMALL" href="/AMUL GHEE SMALL" coords="337,402,338,436,450,436,446,396" shape="poly">
+        <area target="" alt="AMUL ALMOND CHOCLATE GIFT PACK" title="AMUL ALMOND CHOCLATE GIFT PACK" href="/AMUL ALMOND CHOCLATE GIFT PACK" coords="370,362,370,395,435,392,435,363" shape="poly">
+        <area target="" alt="AMUL ALMOND CHOCLATE GIFT PACK" title="AMUL ALMOND CHOCLATE GIFT PACK" href="/AMUL ALMOND CHOCLATE GIFT PACK" coords="794,316,797,346,872,344,870,318" shape="poly">
+        <area target="" alt="AMUL MILK" title="AMUL MILK" href="/AMUL MILK" coords="668,283,668,348,795,344,791,284" shape="poly">
+        <area target="" alt="AMUL KOOL" title="AMUL KOOL" href="/AMUL KOOL" coords="866,196,871,237,1072,242,1070,192" shape="poly">
+        <area target="" alt="AMUL TONE MILK" title="AMUL TONE MILK" href="/AMUL TONE MILK" coords="329,284,321,345,456,351,456,283" shape="poly">
+        <area target="" alt="AMUL SMALL BUTTERMILK" title="AMUL SMALL BUTTERMILK" href="/AMUL SMALL BUTTERMILK" coords="815,316,812,304,922,299,926,346,881,347,870,317" shape="poly">
+        <area target="" alt="AMUL PEDHA" title="AMUL PEDHA" href="/AMUL PEDHA" coords="927,301,933,351,1066,344,1072,300" shape="poly">
+        <area target="" alt="AMUL TONE MILK SMALL PACKET" title="AMUL TONE MILK SMALL PACKET" href="/AMUL TONE MILK SMALL PACKET" coords="474,310,474,350,664,350,663,306" shape="poly">
+        <area target="" alt="AMUL VERY SMALL GHEE PACK" title="AMUL VERY SMALL GHEE PACK" href="/AMUL VERY SMALL GHEE PACK" coords="451,406,454,432,530,438,528,399,502,398,479,400" shape="poly">
+        <area target="" alt="AMUL COLD COFFEE" title="AMUL COLD COFFEE" href="/AMUL COLD COFFEE" coords="875,386,930,382,983,397,980,433,885,435" shape="poly">
+        <area target="" alt="AMUL SMALL WHOLE MILK" title="AMUL SMALL WHOLE MILK" href="/AMUL SMALL WHOLE MILK" coords="997,388,999,433,1068,436,1066,390" shape="poly">
+        <area target="" alt="AMUL BADAM MILK" title="AMUL BADAM MILK" href="/AMUL BADAM MILK" coords="537,377,538,445,650,442,650,373" shape="poly">
+        <area target="" alt="AMUL ICE CREAM " title="AMUL ICE CREAM " href="/AMUL ICE CREAM " coords="583,504,583,557,647,549,646,496" shape="poly">
+        <area target="" alt="DATES" title="DATES" href="/DATES" coords="-1,306,136,306,136,346,1,352" shape="poly">
+        <area target="" alt="AMUL ALMOND CHOCLATE GIFT PACK" title="AMUL ALMOND CHOCLATE GIFT PACK" href="/AMUL ALMOND CHOCLATE GIFT PACK" coords="803,354,852,350,878,360,879,433,815,430,799,426" shape="poly">
+    </map>
+
+
+    <div class="small-container cart-page">
+
+        {% if allitems|length==0 %}
+        <i>
+            <pre>       Your cart is empty...click on items to get added</pre>
+        </i>
+        {% else %}
+
+        <table class="myfixed">
+            <thead>
+                <tr>
+                    <!-- <th width="10%">Sno</th> -->
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+                {% for item in allitems %}
+                <tr>
+                    <!-- <td width="10%">{{loop.index}}</td> -->
+                    <td>
+                        <div class="cart-info">
+                            <div>
+                                <p>{{item.Product}}</p>
+                                <small>Fresh {{item.Product}}</small>
+                                <a href="/removedairy/{{item.Product}}" type="button">Remove</a>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <pre>      {{item.Quantity}}</pre>
+                    </td>
+                    <td>
+                        <pre>                    {{item.Subtotal}} rupees</pre>
+                    </td>
+                </tr>
+                {% endfor %}
+
+</form>
+
+</tbody>
+
+<div class="total-price">
+    <table>
+
+
+        {% set totals = [] %}
+        {% for item in allitems %}
+
+        {% if totals.append(item.Subtotal) %}{% endif %}
+
+        {% endfor %}
+        <tr>
+            <td style="text-align: right">Subtotal</td>
+            <td style="padding-right:50px;">{{ '%0.2f' | format(totals | sum) }}</td>
+        </tr>
+
+        <tr>
+            <td style="text-align: right;">tax</td>
+            <td style="padding-right:50px;">5.00</td>
+        </tr>
+        <tr>
+            <td style="text-align: right;">total</td>
+            <td style="padding-right:50px;" name="totalpay">{{ '%0.2f' | format(totals | sum+5) }}</td>
+        </tr>
+        <tr>
+            <td>
+                <a href="/payment"><input style="font-size:15px;width:200px;margin-left: 130px;" type=button
+                        value='continue to payment'></a>
+            </td>
+
+        </tr>
+
+    </table>
+</div>
+</table>
+{% endif %}
+</div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+</body>
+
+</html>

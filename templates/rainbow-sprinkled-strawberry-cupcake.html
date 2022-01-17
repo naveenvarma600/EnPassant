@@ -1,0 +1,63 @@
+<html>
+    <head>
+        <title>rainbow-sprinkled-strawberry-cupcake</title>
+        <style>
+            body{
+                background-color: blanchedalmond;
+            }
+        </style>
+    </head>
+    <body class="container" style="margin-left:500px;margin-top:140px;">
+        <div class="container">
+            <img src="https://th.bing.com/th/id/OIP.eQ_uwg83yWPqQuI7b0T8twHaGS?w=213&h=182&c=7&o=5&dpr=1.25&pid=1.7" width=350px height=300px>
+            <br><p style="margin-left:110px;">75 rupees per rainbow-sprinkled-strawberry-cupcake</p><br><br>
+
+            <form name="frm-pin" method="POST" action="/rainbow-sprinkled-strawberry-cupcake">
+                <label for="rainbow-sprinkled-strawberry-cupcakes> <b style="margin-left:50px;"> Product Name</b></label>
+                <input type="text" value="rainbow-sprinkled-strawberry-cupcake" id="rainbow-sprinkled-strawberry-cupcakes" name="rainbow-sprinkled-strawberry-cupcake" readonly="readonly">
+                <input type="hidden" name="mode" value="PinRequest" />
+                <br>
+                <br>
+                <br>
+                <label class="w3-text-green"><b style="margin-left:50px;">Quantity Of rainbow-sprinkled-strawberry-cupcake</b></label>
+                <select name="tot_pin_requested" onchange="calculateAmount(this.value)" required>
+                    <option value="" disabled selected>select quantity</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+
+                </select>
+                <br><br><br>
+                <label><b style="margin-left:50px;">Total Amount</b></label>
+                <input class="w3-input w3-border" name="tot_amount" id="tot_amount" type="text" readonly>
+                <br><br><br>
+                <input type="submit" value="ADD TO CART" style="margin-left: 150px;">
+
+            </form>
+                <script>
+                    function calculateAmount(val) {
+                        var tot_price = val * 75;
+
+                        var divobj = document.getElementById('tot_amount');
+                        divobj.value = tot_price;
+                    }
+                </script>
+
+        </div>
+
+
+
+        <script>
+
+        </script>
+
+    </body>
+</html>

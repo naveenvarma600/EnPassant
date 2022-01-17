@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EnPassant-fruits</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <style>
+        body {
+            background-color: WhiteSmoke;
+        }
+
+        table {
+            width: 29.8%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
+        .cart-info {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        th {
+            text-align: left;
+            padding: 5px;
+            color: #fff;
+            background: #ff523b;
+            font-weight: normal;
+        }
+
+        td {
+            padding: 10px 5px;
+        }
+
+        td input {
+            width: 40px;
+            height: 30px;
+            padding: 5px;
+        }
+
+        td a {
+            color: #ff523b;
+            font-size: 12px;
+        }
+
+        .total-price {
+            text-align: right;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .total_price table {
+            border-top: 3px sloid #ff523b;
+            width: 100%;
+            max-width: 350px;
+        }
+
+        td:last-child {
+            text-align: right;
+        }
+
+        th:last-child {
+            text-align: right;
+        }
+        .myfixed{
+            width:455.5px;
+            table-layout: fixed;
+        }
+        .myfixed tbody{
+            display:block;
+            width:456px;
+            overflow:scroll;
+            height:450px;
+
+            }
+            .myfixed thead th tr{
+                display:block;
+
+            }
+            .myfixed th td{
+                width:400px;
+            }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <div class="container-fluid">
+                <div class="logo">
+                    <a style="color:white;" class="navbar-brand" href="/">En<em>Passant</em></a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/aboutus" style="color:white;margin-top: 8px;">About us</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" style="color:white;margin-top:7px" href="#" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                SECTIONS
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="/fruitstore">Fruits</a></li>
+                                <li><a class="dropdown-item" href="/vegetablestore">Vegetables</a></li>
+                                <li><a class="dropdown-item" href="/bakery">Bakery</a></li>
+                                <li><a class="dropdown-item" href="/snacks">Snacks</a></li>
+                                <li><a class="dropdown-item" href="/dairy">Dairy</a></li>
+                                <li><a class="dropdown-item" href="/toiletries">Toiletires</a></li>
+                                <li><a class="dropdown-item" href="/chicken">Chicken</a></li>
+                                <li><a class="dropdown-item" href="/mutton">Mutton</a></li>
+                                <li><a class="dropdown-item" href="/fish">Fish</a></li>
+                                <!--<li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>-->
+                            </ul>
+                        </li>
+
+
+
+                        <form class="d-flex" style="width:700px">
+                            <input class="form-control me-2" style="margin-top:7px;" type="search" placeholder="Search"
+                                aria-label="Search" style="width:200%">
+                            <button class="btn btn-outline-light" style="margin-top:7px;" type="submit">Search</button>
+                        </form>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" style="color:white;margin-top:7px;margin-left: 200px;" href="#"
+                                tabindex="-1" aria-disabled="true">EnPassant,your searches end here :)</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </div>
+    <img src="static/img/chickenbodyim.jpeg" align="left" usemap="#image-map" height=658.4px width=70%>
+<map name="image-map">
+
+
+  <map name="image-map">
+      <area target="" alt="FEET" title="FEET" href="/FEET" coords="620,492,792,635" shape="rect">
+      <area target="" alt="FOREQUARTER" title="FOREQUARTER" href="/FOREQUARTER" coords="838,527,802,523,797,534,803,540,826,561,855,581,890,600,921,618,926,614,945,593,930,578,930,570,937,565,951,557,957,541,962,535,959,516,950,495,946,479,940,465,934,494,919,500,892,502,880,506,878,519,866,528" shape="poly">
+      <area target="" alt="WING" title="WING" href="/WING" coords="809,376,813,363,813,347,790,347,774,365,773,380,774,401,782,417,789,429,797,437,808,440,820,435,832,422,843,405,849,402,877,411,888,411,901,409,897,401,869,381,849,370,832,373,826,377" shape="poly">
+      <area target="" alt="RUMP" title="RUMP" href="/RUMP" coords="923,313,907,318,897,328,894,345,901,361,906,361,924,365,936,357,943,345,944,338,944,324,938,314" shape="poly">
+      <area target="" alt="NECK" title="NECK" href="/NECK" coords="506,441,487,441,476,450,455,458,438,463,435,473,442,481,468,484,482,483,502,473,511,464,520,452" shape="poly">
+      <area target="" alt="HEART" title="HEART" href="/HEART" coords="443,553,432,559,420,573,422,585,427,597,427,604,429,611,434,607,443,602,447,596,455,588,462,577,469,567,456,559,450,553" shape="poly">
+      <area target="" alt="LIVER" title="LIVER" href="/LIVER" coords="535,565,529,569,513,579,506,588,515,596,520,607,528,609,538,605,541,597,558,600,562,608,571,606,580,600,582,592,574,565,559,555,546,552" shape="poly">
+      <area target="" alt="GIZZARD" title="GIZZARD" href="/GIZZARD" coords="349,552,330,561,322,572,315,598,330,612,338,609,358,603,358,582,366,565" shape="poly">
+      <area target="" alt="TIP" title="TIP" href="/TIP" coords="385,429,366,429,342,432,329,432,336,428,326,423,302,427,292,433,292,449,300,455,324,468,354,466,378,456,390,445,395,433" shape="poly">
+      <area target="" alt="MID-JOINT WING" title="MID-JOINT WING" href="/MID-JOINT WING" coords="475,377,470,356,462,341,445,336,414,334,391,337,377,349,361,368,356,389,375,393,402,399,432,401,458,401,475,389" shape="poly">
+      <area target="" alt="DRUMETTE" title="DRUMETTE" href="/DRUMETTE" coords="375,272,348,245,334,236,318,236,306,240,304,259,302,280,318,293,323,304,342,310,357,310,367,309,396,302,408,302,418,292,418,281,406,276" shape="poly">
+      <area target="" alt="DRUMSTICK" title="DRUMSTICK" href="/DRUMSTICK" coords="867,222,861,206,849,185,833,178,807,169,785,164,773,178,763,195,751,219,749,234,754,244,791,243,809,243,824,245,820,267,821,290,825,296,851,299,861,293,867,281" shape="poly">
+      <area target="" alt="BREAST" title="BREAST" href="/BREAST" coords="498,122,469,129,446,136,430,143,418,164,398,179,379,188,375,202,386,213,414,224,463,215,486,212,502,200,526,192,546,150,530,136,526,127" shape="poly">
+      <area target="" alt="BREAST FILLET" title="BREAST FILLET" href="/BREAST FILLET" coords="432,70,417,63,394,77,376,95,361,109,341,131,330,152,322,159,327,167,361,163,383,148,410,133,430,121,461,106,475,88,459,73" shape="poly">
+      <area target="" alt="HAM" title="HAM" href="/HAM" coords="617,73,589,49,568,42,550,51,542,81,544,101,548,122,551,143,561,145,585,150,603,163,616,195,632,206,644,208,656,195,668,176,666,162,646,135,634,114" shape="poly">
+      <area target="" alt="THIGH" title="THIGH" href="/THIGH" coords="752,66,707,69,672,72,653,78,658,93,658,107,664,127,670,140,686,148,716,156,735,165,747,164,759,154,759,134,766,106,766,82" shape="poly">
+      <area target="" alt="HINDQUARTER" title="HINDQUARTER" href="/HINDQUARTER" coords="867,43,847,39,807,42,799,53,799,90,801,128,807,147,825,173,847,181,871,181,883,212,895,195,903,186,868,132,889,120,902,102,910,84,914,63" shape="poly">
+      <area target="" alt="FULL BODY" title="FULL BODY" href="/CHICKEN FULL BODY" coords="679,251,660,239,629,229,600,228,589,236,582,250,572,269,566,275,529,275,516,277,506,289,506,299,496,310,502,330,506,343,512,360,522,383,536,387,536,411,550,447,567,456,587,458,603,446,604,472,610,480,621,485,640,478,654,465,666,444,680,424,712,419,720,404,742,388,748,360,754,344,757,330,757,315,753,294,752,277,742,265,721,249,705,249,697,270" shape="poly">
+      <area target="" alt="TURKEY EGG" title="TURKEY EGG" href="/TURKEY EGG" coords="41,471,29,471,22,482,13,492,3,512,9,530,9,542,15,552,26,557,39,560,51,543,58,531,59,511,61,494,48,476" shape="poly">
+      <area target="" alt="CHICKEN EGG" title="CHICKEN EGG" href="/CHICKEN EGG" coords="91,502,77,507,73,518,72,535,72,551,93,558,99,553,104,541,106,532,108,517,105,506" shape="poly">
+      <area target="" alt="QUAIL" title="QUAIL" href="/QUAIL" coords="129,532,123,543,123,551,126,555,138,554,138,539,135,531" shape="poly">
+      <area target="" alt="GOOSE" title="GOOSE" href="/GOOSE" coords="180,488,169,494,166,505,164,519,162,528,162,545,164,554,174,557,186,558,198,555,198,534,197,521,197,509,186,488" shape="poly">
+      <area target="" alt="PHEASANT" title="PHEASANT" href="/PHEASANT" coords="242,496,230,496,223,514,220,523,218,540,219,551,231,554,242,561,251,551,254,542,260,523,256,503" shape="poly">
+
+
+          </map>
+
+
+
+
+          <div class="small-container cart-page">
+
+            {% if allitems|length==0 %}
+            <i>
+                <pre>       Your cart is empty...click on items to get added</pre>
+            </i>
+            {% else %}
+
+            <table class="myfixed">
+                <thead>
+                    <tr>
+                        <!-- <th width="10%">Sno</th> -->
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Subtotal</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+
+                    {% for item in allitems %}
+                    <tr>
+                        <!-- <td width="10%">{{loop.index}}</td> -->
+                        <td>
+                            <div class="cart-info">
+                                <div>
+                                    <p>{{item.Product}}</p>
+                                    <small>Fresh {{item.Product}}</small>
+                                    <a href="/removechicken/{{item.Product}}" type="button">Remove</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <pre>      {{item.Quantity}}</pre>
+                        </td>
+                        <td>
+                            <pre>                    {{item.Subtotal}} rupees</pre>
+                        </td>
+                    </tr>
+                    {% endfor %}
+
+    </form>
+
+    </tbody>
+
+    <div class="total-price">
+        <table>
+
+
+            {% set totals = [] %}
+            {% for item in allitems %}
+
+            {% if totals.append(item.Subtotal) %}{% endif %}
+
+            {% endfor %}
+            <tr>
+                <td style="text-align: right">Subtotal</td>
+                <td style="padding-right:50px;">{{ '%0.2f' | format(totals | sum) }}</td>
+            </tr>
+
+            <tr>
+                <td style="text-align: right;">tax</td>
+                <td style="padding-right:50px;">5.00</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;">total</td>
+                <td style="padding-right:50px;" name="totalpay">{{ '%0.2f' | format(totals | sum+5) }}</td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="/payment"><input style="font-size:15px;width:200px;margin-left: 130px;" type=button
+                            value='continue to payment'></a>
+                </td>
+
+            </tr>
+
+        </table>
+    </div>
+    </table>
+    {% endif %}
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+</body>
+
+</html>

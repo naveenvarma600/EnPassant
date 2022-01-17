@@ -1,0 +1,410 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EnPassant-fruits</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <style>
+        body {
+            background-color: WhiteSmoke;
+        }
+
+        table {
+            width: 29.8%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
+        .cart-info {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        th {
+            text-align: left;
+            padding: 5px;
+            color: #fff;
+            background: #ff523b;
+            font-weight: normal;
+        }
+
+        td {
+            padding: 10px 5px;
+        }
+
+        td input {
+            width: 40px;
+            height: 30px;
+            padding: 5px;
+        }
+
+        td a {
+            color: #ff523b;
+            font-size: 12px;
+        }
+
+        .total-price {
+            text-align: right;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .total_price table {
+            border-top: 3px sloid #ff523b;
+            width: 100%;
+            max-width: 350px;
+        }
+
+        td:last-child {
+            text-align: right;
+        }
+
+        th:last-child {
+            text-align: right;
+        }
+
+        .myfixed {
+            width: 455.5px;
+            table-layout: fixed;
+        }
+
+        .myfixed tbody {
+            display: block;
+            width: 456px;
+            overflow: scroll;
+            height: 450px;
+
+        }
+
+        .myfixed thead th tr {
+            display: block;
+
+        }
+
+        .myfixed th td {
+            width: 400px;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <div class="container-fluid">
+                <div class="logo">
+                    <a style="color:white;" class="navbar-brand" href="/">En<em>Passant</em></a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/aboutus" style="color:white;margin-top: 8px;">About us</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" style="color:white;margin-top:7px" href="#"
+                                id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                SECTIONS
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="/fruitstore">Fruits</a></li>
+                                <li><a class="dropdown-item" href="/vegetablestore">Vegetables</a></li>
+                                <li><a class="dropdown-item" href="/bakery">Bakery</a></li>
+                                <li><a class="dropdown-item" href="/snacks">Snacks</a></li>
+                                <li><a class="dropdown-item" href="/dairy">Dairy</a></li>
+                                <li><a class="dropdown-item" href="/toiletries">Toiletires</a></li>
+                                <li><a class="dropdown-item" href="/chicken">Chicken</a></li>
+                                <li><a class="dropdown-item" href="/mutton">Mutton</a></li>
+                                <li><a class="dropdown-item" href="/fish">Fish</a></li>
+                                <!--<li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>-->
+                            </ul>
+                        </li>
+
+
+
+                        <form class="d-flex" style="width:700px">
+                            <input class="form-control me-2" style="margin-top:7px;" type="search" placeholder="Search"
+                                aria-label="Search" style="width:200%">
+                            <button class="btn btn-outline-light" style="margin-top:7px;" type="submit">Search</button>
+                        </form>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" style="color:white;margin-top:7px;margin-left: 200px;" href="#"
+                                tabindex="-1" aria-disabled="true">EnPassant,your searches end here :)</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </div>
+    <img src="static/img/toiletriesim.jpeg" align="left" usemap="#image-map" height=658.4px width=70%>
+    <map name="image-map">
+        
+            <area target="" alt="NIVEA ROSE BATH GEL" title="NIVEA ROSE BATH GEL" href="/NIVEA ROSE BATH GEL"
+                coords="2,40,27,39,38,49,39,68,41,87,38,96,-1,100" shape="poly">
+            <area target="" alt="NIVEA LIME BATH GEL" title="NIVEA LIME BATH GEL" href="/NIVEA LIME BATH GEL"
+                coords="61,40,42,40,41,52,41,65,42,88,65,103,89,92,114,100,109,75,101,52,93,36" shape="poly">
+            <area target="" alt="NIVEA LAVENDER BATH GEL" title="NIVEA LAVENDER BATH GEL"
+                href="/NIVEA LAVENDER BATH GEL" coords="113,36,113,67,118,99,136,100,172,97,173,79,166,55,158,39"
+                shape="poly">
+            <area target="" alt="FIAMA ORANGE BATH GEL" title="FIAMA ORANGE BATH GEL" href="/FIAMA ORANGE BATH GEL"
+                coords="224,29,166,32,176,90,218,96,264,96,274,89,273,66,259,33,246,24" shape="poly">
+            <area target="" alt="FIAMA LAVENDER BATH GEL" title="FIAMA LAVENDER BATH GEL"
+                href="/FIAMA LAVENDER BATH GEL"
+                coords="286,35,279,56,279,77,279,87,293,92,337,96,378,96,379,83,380,54,373,43,362,33" shape="poly">
+            <area target="" alt="FIAMA BLUE BUTTER GEL" title="FIAMA BLUE BUTTER GEL" href="/FIAMA BLUE BUTTER GEL"
+                coords="388,33,382,90,443,92,522,91,546,90,537,62,537,36" shape="poly">
+            <area target="" alt="GARNIER GREEN BATH GEL" title="GARNIER GREEN BATH GEL" href="/GARNIER GREEN BATH GEL"
+                coords="557,22,535,35,540,65,550,87,598,85,595,58,595,31" shape="poly">
+            <area target="" alt="HYGIENE BATH SOAPS" title="HYGIENE BATH SOAPS" href="/HYGIENE BATH SOAPS"
+                coords="596,28,602,81,1035,79,1038,58,896,58,875,61,872,48,832,49,838,31,759,34,759,25,623,23"
+                shape="poly">
+            <area target="" alt="PEARS GLYCERINE SOAP BIG PACK" title="PEARS GLYCERINE SOAP BIG PACK"
+                href="/PEARS GLYCERINE SOAP BIG PACK" coords="3,153,5,180,286,179,283,147,95,148" shape="poly">
+            <area target="" alt="PEARS GLYCERINE SOAP SMALL PACK" title="PEARS GLYCERINE SOAP SMALL PACK"
+                href="/PEARS GLYCERINE SOAP SMALL PACK" coords="278,125,293,180,370,173,374,122" shape="poly">
+            <area target="" alt="FIAMA DIFERENT GLYCERINE COMBO PACK" title="FIAMA DIFERENT GLYCERINE COMBO PACK"
+                href="/FIAMA DIFERENT GLYCERINE COMBO PACK" coords="377,142,377,172,434,175,530,170,533,155,534,138"
+                shape="poly">
+            <area target="" alt="FIAMA BLACK GLYCERINE COMBO PACK" title="FIAMA BLACK GLYCERINE COMBO PACK"
+                href="/FIAMA BLACK GLYCERINE COMBO PACK" coords="537,139,530,169,664,171,662,135" shape="poly">
+            <area target="" alt="MEDISILK SHAMPOO" title="MEDISILK SHAMPOO" href="/MEDISILK SHAMPOO"
+                coords="662,111,663,169,916,167,919,109" shape="poly">
+            <area target="" alt="CINTHOL COMBO PACK" title="CINTHOL COMBO PACK" href="/CINTHOL COMBO PACK"
+                coords="929,110,926,166,985,165,994,113" shape="poly">
+            <area target="" alt="SANTOOR REGULAR BIG PACK" title="SANTOOR REGULAR BIG PACK"
+                href="/SANTOOR REGULAR BIG PACK" coords="14,202,22,256,176,250,168,200" shape="poly">
+            <area target="" alt="SANTOOR GOLD PACK" title="SANTOOR GOLD PACK" href="/SANTOOR GOLD PACK"
+                coords="170,196,176,247,254,248,258,196" shape="poly">
+            <area target="" alt="SANTOOR WHITE BIG PACK" title="SANTOOR WHITE BIG PACK" href="/SANTOOR WHITE BIG PACK"
+                coords="258,213,254,244,407,248,400,215" shape="poly">
+            <area target="" alt="SANTOOR REGULAR SMALL" title="SANTOOR REGULAR SMALL" href="/SANTOOR REGULAR SMALL"
+                coords="404,206,406,246,482,249,479,194" shape="poly">
+            <area target="" alt="SANTOOR WHITE GLYCERINE" title="SANTOOR WHITE GLYCERINE"
+                href="/SANTOOR WHITE GLYCERINE" coords="482,192,484,249,588,246,587,190" shape="poly">
+            <area target="" alt="SANTOOR GOLD BIG PACK" title="SANTOOR GOLD BIG PACK" href="/SANTOOR GOLD BIG PACK"
+                coords="593,212,586,244,721,245,714,209" shape="poly">
+            <area target="" alt="CHARM TEA SHAMPOO" title="CHARM TEA SHAMPOO" href="/CHARM TEA SHAMPOO"
+                coords="722,201,726,242,944,239,947,199" shape="poly">
+            <area target="" alt="MEDIMIX GREEN SMALL PACK" title="MEDIMIX GREEN SMALL PACK"
+                href="/MEDIMIX GREEN SMALL PACK" coords="949,216,947,245,1019,242,1018,214" shape="poly">
+            <area target="" alt="MEDIMIX GREEN GLYCERINE" title="MEDIMIX GREEN GLYCERINE"
+                href="/MEDIMIX GREEN GLYCERINE.html" coords="89,303,83,319,148,320,150,297" shape="poly">
+            <area target="" alt="PEARS BLUE GLYCERINE SOAP BIG" title="PEARS BLUE GLYCERINE SOAP BIG"
+                href="/PEARS BLUE GLYCERINE SOAP BIG" coords="153,296,153,320,255,320,256,292" shape="poly">
+            <area target="" alt="MEDIMIX BLUE GLYCERINE SOAP SMALL" title="MEDIMIX BLUE GLYCERINE SOAP SMALL"
+                href="/MEDIMIX BLUE GLYCERINE SOAP SMALL" coords="260,274,267,321,349,321,342,277" shape="poly">
+            <area target="" alt="HIMALAYA SANDAL BIG" title="HIMALAYA SANDAL BIG" href="/HIMALAYA SANDAL BIG"
+                coords="346,291,351,319,454,319,450,285" shape="poly">
+            <area target="" alt="DETTOL SMALL BLUE" title="DETTOL SMALL BLUE" href="/DETTOL SMALL BLUE"
+                coords="459,296,458,304,454,313,530,317,525,294" shape="poly">
+            <area target="" alt="DETTOL SMALL GREEN" title="DETTOL SMALL GREEN" href="/DETTOL SMALL GREEN"
+                coords="527,295,666,295,666,312,530,319" shape="poly">
+            <area target="" alt="CINTHOL YELLOW" title="CINTHOL YELLOW" href="/CINTHOL YELLOW"
+                coords="649,280,662,279,664,285,668,317,737,314,737,287,719,275" shape="poly">
+            <area target="" alt="CINTHOL RED" title="CINTHOL RED" href="CINTHOL RED.html"
+                coords="739,297,869,297,866,317,743,317,741,308" shape="poly">
+            <area target="" alt="AYURVEDIC SOAP" title="AYURVEDIC SOAP" href="/AYURVEDIC SOAP"
+                coords="836,262,836,277,858,286,876,299,874,315,916,308,984,312,1003,306,1005,277,988,274,957,259"
+                shape="poly">
+            <area target="" alt="PEARS YELLOW GLYCERINE" title="PEARS YELLOW GLYCERINE" href="/PEARS YELLOW GLYCERINE"
+                coords="114,349,52,372,52,392,117,392,126,361,143,356" shape="poly">
+            <area target="" alt="PEARS BLUE GLYCERINE SMALL" title="PEARS BLUE GLYCERINE SMALL"
+                href="/PEARS BLUE GLYCERINE SMALL" coords="186,349,128,372,118,390,188,390,249,386,253,367,191,368"
+                shape="poly">
+            <area target="" alt="SANTOOR REGULAR 1 SOAP" title="SANTOOR REGULAR 1 SOAP" href="/SANTOOR REGULAR 1 SOAP"
+                coords="282,369,256,370,256,392,328,391,329,369" shape="poly">
+            <area target="" alt="SANTOOR WHITE 1 SOAP" title="SANTOOR WHITE 1 SOAP" href="/SANTOOR WHITE 1 SOAP"
+                coords="358,364,333,370,332,386,398,386,396,366" shape="poly">
+            <area target="" alt="GLYCERINE NATURAL SOAP" title="GLYCERINE NATURAL SOAP" href="/GLYCERINE NATURAL SOAP"
+                coords="410,346,571,349,585,386,402,387,398,343" shape="poly">
+            <area target="" alt="LIRIL SOAP" title="LIRIL SOAP" href="/LIRIL SOAP"
+                coords="579,350,582,370,583,385,656,382,657,371,645,357" shape="poly">
+            <area target="" alt="DOVE SMALL" title="DOVE SMALL" href="/DOVE SMALL"
+                coords="652,358,663,366,663,378,726,376,719,356" shape="poly">
+            <area target="" alt="DETTOL GREEN SMALL" title="DETTOL GREEN SMALL" href="/DETTOL GREEN SMALL"
+                coords="723,355,723,368,729,379,787,379,778,355" shape="poly">
+            <area target="" alt="PEARS GREEN GLYCERINE" title="PEARS GREEN GLYCERINE" href="/PEARS GREEN GLYCERINE"
+                coords="795,360,790,380,861,382,863,350,821,359" shape="poly">
+            <area target="" alt="AWS SOAP" title="AWS SOAP" href="/AWS SOAP"
+                coords="863,339,902,342,904,379,869,383,862,379" shape="poly">
+            <area target="" alt="SAVLON SOAP" title="SAVLON SOAP" href="/SAVLON SOAP"
+                coords="909,336,909,355,909,379,999,381,988,343" shape="poly">
+            <area target="" alt="LUX BLUE SOAP" title="LUX BLUE SOAP" href="/LUX BLUE SOAP"
+                coords="149,425,118,436,120,453,190,454,186,437,202,425" shape="poly">
+            <area target="" alt="DETTOL GREEN SMALL" title="DETTOL GREEN SMALL" href="/DETTOL GREEN SMALL"
+                coords="225,421,198,440,201,449,250,453,256,439,264,429" shape="poly">
+            <area target="" alt="DOVE" title="DOVE" href="DOVE.html" coords="266,434,323,432,321,447,264,450"
+                shape="poly">
+            <area target="" alt="LUX GREEN" title="LUX GREEN" href="/LUX GREEN"
+                coords="328,440,326,452,380,453,378,425,333,426" shape="poly">
+            <area target="" alt="LUX ROSE SOAP" title="LUX ROSE SOAP" href="/LUX ROSE SOAP"
+                coords="396,411,385,432,385,447,447,451,450,411" shape="poly">
+            <area target="" alt="SANTOOR REGULAR BIG" title="SANTOOR REGULAR BIG" href="/SANTOOR REGULAR BIG"
+                coords="451,413,458,443,605,449,598,409,599,401" shape="poly">
+            <area target="" alt="HIMALAYA SOAP" title="HIMALAYA SOAP" href="/HIMALAYA SOAP"
+                coords="610,407,607,446,667,444,667,410" shape="poly">
+            <area target="" alt="DOVE REGULAR BIG PACK" title="DOVE REGULAR BIG PACK" href="/DOVE REGULAR BIG PACK"
+                coords="675,410,675,448,773,446,770,411" shape="poly">
+            <area target="" alt="LUX GOLD" title="LUX GOLD" href="/LUX GOLD" coords="776,405,784,442,842,441,838,401"
+                shape="poly">
+            <area target="" alt="LIFEBOY TURMERIC SOAP" title="LIFEBOY TURMERIC SOAP" href="/LIFEBOY TURMERIC SOAP"
+                coords="848,421,852,441,979,443,978,425,971,414" shape="poly">
+            <area target="" alt="PALM OLIVE CHERRY SHAMPOO" title="PALM OLIVE CHERRY SHAMPOO"
+                href="/PALM OLIVE CHERRY SHAMPOO" coords="96,472,115,522,164,539,195,539,244,538,245,510,231,474"
+                shape="poly">
+            <area target="" alt="PALM OLIVE GOLD SHAMPOO" title="PALM OLIVE GOLD SHAMPOO"
+                href="/PALM OLIVE GOLD SHAMPOO" coords="236,470,245,530,401,530,408,470" shape="poly">
+            <area target="" alt="SANTOOR GOLD HANDWASH" title="SANTOOR GOLD HANDWASH" href="/SANTOOR GOLD HANDWASH"
+                coords="416,468,427,498,409,528,466,536,506,540,509,510,508,477,504,472,486,469" shape="poly">
+            <area target="" alt="LIFEBOY HANDPUMP" title="LIFEBOY HANDPUMP" href="/LIFEBOY HANDPUMP"
+                coords="520,470,512,532,637,538,642,492,616,470,584,471" shape="poly">
+            <area target="" alt="HYGIENE HANDWASH" title="HYGIENE HANDWASH" href="/HYGIENE HANDWASH"
+                coords="627,468,646,497,639,529,715,535,720,497,705,482,678,483,674,494,661,481,646,470" shape="poly">
+            <area target="" alt="AYUSH SOAP" title="AYUSH SOAP" href="/AYUSH SOAP"
+                coords="724,510,726,532,858,537,826,513" shape="poly">
+            <area target="" alt="ROSE BATH POWDER" title="ROSE BATH POWDER" href="/ROSE BATH POWDER"
+                coords="800,471,785,499,798,505,813,508,831,507,834,519,842,521,858,529,874,534,910,534,941,536,974,536,963,525,954,509,948,497,958,489,951,469,922,474,895,465"
+                shape="poly">
+            <area target="" alt="ENRIQUE LIME HANDPUMP" title="ENRIQUE LIME HANDPUMP" href="/ENRIQUE LIME HANDPUMP"
+                coords="148,592,150,654,196,655,191,608,191,588" shape="poly">
+            <area target="" alt="ENRIQUE ROSE HANDPUMP" title="ENRIQUE ROSE HANDPUMP" href="/ENRIQUE ROSE HANDPUMP"
+                coords="200,596,196,625,198,654,228,656,230,626,224,599" shape="poly">
+            <area target="" alt="SANTOOR SANDAL HANDPUMP" title="SANTOOR SANDAL HANDPUMP"
+                href="/SANTOOR SANDAL HANDPUMP" coords="243,572,242,612,245,649,336,650,328,579" shape="poly">
+            <area target="" alt="SANTOOR ROSE HANDPUMP" title="SANTOOR ROSE HANDPUMP" href="/SANTOOR ROSE HANDPUMP"
+                coords="360,565,332,584,336,620,346,652,385,652,385,614,388,569" shape="poly">
+            <area target="" alt="KEIN HAND SANITIZER" title="KEIN HAND SANITIZER" href="/KEIN HAND SANITIZER"
+                coords="406,563,388,612,386,644,461,651,476,634,464,581,454,572,433,574,430,559" shape="poly">
+            <area target="" alt="DETTOL HANDWIPES" title="DETTOL HANDWIPES" href="/DETTOL HANDWIPES"
+                coords="485,603,474,644,534,642,518,601" shape="poly">
+            <area target="" alt="HYGEINE SANITIZER" title="HYGEINE SANITIZER" href="/HYGEINE SANITIZER"
+                coords="540,556,528,588,539,640,617,641,614,602,598,569,595,562" shape="poly">
+            <area target="" alt="LIFEBOY HANDSANITIZER" title="LIFEBOY HANDSANITIZER" href="/LIFEBOY HANDSANITIZER"
+                coords="622,570,626,642,718,638,720,607,694,570" shape="poly">
+            <area target="" alt="LIFEBOY HANDS SANITIZER REFILL LIME" title="LIFEBOY HANDS SANITIZER REFILL LIME"
+                href="/LIFEBOY HANDS SANITIZER REFILL LIME"
+                coords="704,552,704,574,717,593,724,634,785,639,836,639,832,600,820,580,810,568,806,560" shape="poly">
+            <area target="" alt="LIFEBOY HANDS SANITIZER REFILL ROSE" title="LIFEBOY HANDS SANITIZER REFILL ROSE"
+                href="/LIFEBOY HANDS SANITIZER REFILL ROSE"
+                coords="826,560,826,578,833,591,838,626,838,634,886,636,949,641,952,619,952,589,939,569,926,559"
+                shape="poly">
+            <area target="" alt="FRUIT BASKET" title="FRUIT BASKET" href="/FRUIT BASKET"
+                coords="78,491,10,505,6,614,104,623,130,603,143,579,100,577,83,570,90,554,93,531,114,530,98,488"
+                shape="poly">
+            <area target="" alt="AGARBATHI CYCLE SANDAL" title="AGARBATHI CYCLE SANDAL" href="/AGARBATHI CYCLE SANDAL"
+                coords="982,538,956,568,961,614,998,634,1058,631,1066,610,1066,548" shape="poly">
+
+        </map>
+
+        <div class="small-container cart-page">
+
+            {% if allitems|length==0 %}
+            <i>
+                <pre>       Your cart is empty...click on items to get added</pre>
+            </i>
+            {% else %}
+
+            <table class="myfixed">
+                <thead>
+                    <tr>
+                        <!-- <th width="10%">Sno</th> -->
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Subtotal</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+
+                    {% for item in allitems %}
+                    <tr>
+                        <!-- <td width="10%">{{loop.index}}</td> -->
+                        <td>
+                            <div class="cart-info">
+                                <div>
+                                    <p>{{item.Product}}</p>
+                                    <small>Fresh {{item.Product}}</small>
+                                    <a href="/removetoiletries/{{item.Product}}" type="button">Remove</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <pre>      {{item.Quantity}}</pre>
+                        </td>
+                        <td>
+                            <pre>                    {{item.Subtotal}} rupees</pre>
+                        </td>
+                    </tr>
+                    {% endfor %}
+
+                    </form>
+
+                </tbody>
+
+                <div class="total-price">
+                    <table>
+
+
+                        {% set totals = [] %}
+                        {% for item in allitems %}
+
+                        {% if totals.append(item.Subtotal) %}{% endif %}
+
+                        {% endfor %}
+                        <tr>
+                            <td style="text-align: right">Subtotal</td>
+                            <td style="padding-right:50px;">{{ '%0.2f' | format(totals | sum) }}</td>
+                        </tr>
+
+                        <tr>
+                            <td style="text-align: right;">tax</td>
+                            <td style="padding-right:50px;">5.00</td>
+                        </tr>
+                        <tr>
+                            <td style="text-align: right;">total</td>
+                            <td style="padding-right:50px;" name="totalpay">{{ '%0.2f' | format(totals | sum+5) }}</td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <a href="/payment"><input style="font-size:15px;width:200px;margin-left: 130px;"
+                                        type=button value='continue to payment'></a>
+                            </td>
+
+                        </tr>
+
+                    </table>
+                </div>
+            </table>
+            {% endif %}
+        </div>
+
+
+
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+            crossorigin="anonymous"></script>
+        <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+</body>
+
+</html>

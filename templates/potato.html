@@ -1,0 +1,101 @@
+<html>
+    <head>
+        <title>potato</title>
+        <style>
+            body{
+                background-color: blanchedalmond;
+            }
+        </style>
+    </head>
+    <body class="container" style="margin-left:500px;margin-top:140px;">
+        <div class="container">
+            <img src="https://th.bing.com/th/id/OIP.JJleTa7h3hwEwDA-iAkanwHaHc?w=174&h=180&c=7&o=5&dpr=1.25&pid=1.7" width=350px height=300px>
+            <br><p style="margin-left:110px;">25 rupees per kg potato</p><br><br>
+
+            <form name="frm-pin" method="POST" action="/potato">
+                <label for="potatos"> <b style="margin-left:50px;"> Product Name</b></label>
+                <input type="text" value="potato" id="potatos" name="potato" readonly="readonly">
+                <input type="hidden" name="mode" value="PinRequest" />
+                <br>
+                <br>
+                <br>
+                <label class="w3-text-green"><b style="margin-left:50px;">Quantity Of potato</b></label>
+                <select name="tot_pin_requested" onchange="calculateAmount(this.value)" required>
+                    <option value="" disabled selected>select quantity</option>
+                    <option value="1">100 grams</option>
+                    <option value="2">200 grams</option>
+                    <option value="3">300 grams</option>
+                    <option value="4">400 grams</option>
+                    <option value="5">500 grams</option>
+                    <option value="6">600 grams</option>
+                    <option value="7">700 grams</option>
+                    <option value="8">800 grams</option>
+                    <option value="9">900 grams</option>
+                    <option value="10">1000 grams</option>
+                    <option value="11">1100 grams</option>
+                    <option value="12">1200 grams</option>
+                    <option value="13">1300 grams</option>
+                    <option value="14">1400 grams</option>
+                    <option value="15">1500 grams</option>
+                    <option value="16">1600 grams</option>
+                    <option value="17">1700 grams</option>
+                    <option value="18">1800 grams</option>
+                    <option value="19">1900 grams</option>
+                    <option value="20">2000 grams</option>
+                    <option value="21">2100 grams</option>
+                    <option value="22">2200 grams</option>
+                    <option value="23">2300 grams</option>
+                    <option value="24">2400 grams</option>
+                    <option value="25">2500 grams</option>
+                    <option value="26">2600 grams</option>
+                    <option value="27">2700 grams</option>
+                    <option value="28">2800 grams</option>
+                    <option value="29">2900 grams</option>
+                    <option value="30">3000 grams</option>
+                    <option value="31">3100 grams</option>
+                    <option value="32">3200 grams</option>
+                    <option value="33">3300 grams</option>
+                    <option value="34">3400 grams</option>
+                    <option value="35">3500 grams</option>
+                    <option value="36">3600 grams</option>
+                    <option value="37">3700 grams</option>
+                    <option value="38">3800 grams</option>
+                    <option value="39">3900 grams</option>
+                    <option value="40">4000 grams</option>
+                    <option value="41">4100 grams</option>
+                    <option value="42">4200 grams</option>
+                    <option value="43">4300 grams</option>
+                    <option value="44">4400 grams</option>
+                    <option value="45">4500 grams</option>
+                    <option value="46">4600 grams</option>
+                    <option value="47">4700 grams</option>
+                    <option value="48">4800 grams</option>
+                    <option value="49">4900 grams</option>
+                    <option value="50">5000 grams</option>
+                </select>
+                <br><br><br>
+                <label><b style="margin-left:50px;">Total Amount</b></label>
+                <input class="w3-input w3-border" name="tot_amount" id="tot_amount" type="text" readonly>
+                <br><br><br>
+                <input type="submit" value="ADD TO CART" style="margin-left: 150px;">
+
+            </form>
+                <script>
+                    function calculateAmount(val) {
+                        var tot_price = val * 2.5;
+                        
+                        var divobj = document.getElementById('tot_amount');
+                        divobj.value = tot_price;
+                    }
+                </script>
+        
+        </div>
+        
+
+
+        <script>
+            
+        </script>
+
+    </body>
+</html>

@@ -1,0 +1,82 @@
+<html>
+    <head>
+        <title>SANTOOR WHITE BIG PACK"</title>
+        <style>
+            body{
+                background-color: blanchedalmond;
+            }
+        </style>
+    </head>
+    <body class="container" style="margin-left:500px;margin-top:140px;">
+        <div class="container">
+            <img src="https://th.bing.com/th/id/OIP.bX3zLpvE8CgYaYxWBQpN3wHaHa?w=195&h=194&c=7&o=5&dpr=1.25&pid=1.7" width=350px height=300px>
+            <br><p style="margin-left:110px;">150 rupees per piece</p><br><br>
+
+            <form name="frm-pin" method="POST" action="/SANTOOR WHITE BIG PACK">
+
+                <label for="SANTOOR WHITE BIG PACKs"> <b style="margin-left:50px;"> Product Name</b></label>
+                <input type="text" value="SANTOOR WHITE BIG PACK" id="SANTOOR WHITE BIG PACKs" name="SANTOOR WHITE BIG PACK" readonly="readonly">
+                <input type="hidden" name="mode" value="PinRequest" />
+                <br>
+                <br>
+                <br>
+                <label class="w3-text-green"><b style="margin-left:50px;">Number Of Pieces</b></label>
+                <select name="tot_pin_requested" onchange="calculateAmount(this.value)" required>
+                    <option value="" disabled selected>select quantity</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                    <option value="21">21</option>
+                    <option value="22">22</option>
+                    <option value="23">23</option>
+                    <option value="24">24</option>
+                    <option value="25">25</option>
+                    <option value="26">26</option>
+                    <option value="27">27</option>
+                    <option value="28">28</option>
+                    <option value="29">29</option>
+                    <option value="30">30</option>
+                </select>
+                <br><br><br>
+                <label><b style="margin-left:50px;">Total Amount</b></label>
+                <input class="w3-input w3-border" name="tot_amount" id="tot_amount" type="text" readonly>
+                <br><br><br>
+                <input type="submit" value="ADD TO CART" style="margin-left: 150px;">
+
+            </form>
+                <script>
+                    function calculateAmount(val) {
+                        var tot_price = val * 150;
+
+                        var divobj = document.getElementById('tot_amount');
+                        divobj.value = tot_price;
+                    }
+                </script>
+
+        </div>
+
+
+
+        <script>
+
+        </script>
+
+    </body>
+</html>

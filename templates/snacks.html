@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EnPassant-fruits</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    
+    
+    <style>
+        body {
+            background-color: WhiteSmoke;
+        }
+
+        table {
+            width: 29.8%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
+        .cart-info {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        th {
+            text-align: left;
+            padding: 5px;
+            color: #fff;
+            background: #ff523b;
+            font-weight: normal;
+        }
+
+        td {
+            padding: 10px 5px;
+        }
+
+        td input {
+            width: 40px;
+            height: 30px;
+            padding: 5px;
+        }
+
+        td a {
+            color: #ff523b;
+            font-size: 12px;
+        }
+
+        .total-price {
+            text-align: right;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .total_price table {
+            border-top: 3px sloid #ff523b;
+            width: 100%;
+            max-width: 350px;
+        }
+
+        td:last-child {
+            text-align: right;
+        }
+
+        th:last-child {
+            text-align: right;
+        }
+        .myfixed{
+            width:455.5px;
+            table-layout: fixed;
+        }
+        .myfixed tbody{
+            display:block;
+            width:456px;
+            overflow:scroll;
+            height:450px;
+
+            }
+            .myfixed thead th tr{
+                display:block;
+                
+            }
+            .myfixed th td{
+                width:400px;
+            }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <div class="container-fluid">
+                <div class="logo">
+                    <a style="color:white;" class="navbar-brand" href="/">En<em>Passant</em></a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/aboutus" style="color:white;margin-top: 8px;">About us</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" style="color:white;margin-top:7px" href="#" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                SECTIONS
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="/fruitstore">Fruits</a></li>
+                                <li><a class="dropdown-item" href="/vegetablestore">Vegetables</a></li>
+                                <li><a class="dropdown-item" href="/bakery">Bakery</a></li>
+                                <li><a class="dropdown-item" href="/snacks">Snacks</a></li>
+                                <li><a class="dropdown-item" href="/dairy">Dairy</a></li>
+                                <li><a class="dropdown-item" href="/toiletries">Toiletires</a></li>
+                                <li><a class="dropdown-item" href="/chicken">Chicken</a></li>
+                                <li><a class="dropdown-item" href="/mutton">Mutton</a></li>
+                                <li><a class="dropdown-item" href="/fish">Fish</a></li>
+                                <!--<li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>-->
+                            </ul>
+                        </li>
+
+
+
+                        <form class="d-flex" style="width:700px">
+                            <input class="form-control me-2" style="margin-top:7px;" type="search" placeholder="Search"
+                                aria-label="Search" style="width:200%">
+                            <button class="btn btn-outline-light" style="margin-top:7px;" type="submit">Search</button>
+                        </form>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" style="color:white;margin-top:7px;margin-left: 200px;" href="#"
+                                tabindex="-1" aria-disabled="true">EnPassant,your searches end here :)</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </div>
+    <img src="static/img/grocerystoreim.jpg" align="left" usemap="#image-map" height=658.4px width=70%>
+
+    <map name="image-map">
+        <area target="" alt="BRITANIA RUSK" title="BRITANIA RUSK" href="/BRITANIA RUSK" coords="3,1,1,42,0,133,112,127,114,104,115,62,115,30,124,25,123,2,109,0" shape="poly">
+        <area target="" alt="BRITANIA BISCUIT" title="BRITANIA BISCUIT" href="/BRITANIA BISCUIT" coords="118,33,116,46,116,78,113,114,113,126,174,124,218,125,290,126,297,106,301,83,306,78,307,58,323,50,311,30,293,26,280,23,191,29,144,24,126,28" shape="poly">
+        <area target="" alt="BALAJI RASGULLA" title="BALAJI RASGULLA" href="/BALAJI RASGULLA" coords="482,75,476,115,476,124,513,126,573,128,628,123,634,111,637,81,630,74,578,75,515,76" shape="poly">
+        <area target="" alt="HALDIRAMS WHITE RASGULLA" title="HALDIRAMS WHITE RASGULLA" href="/HALDIRAMS WHITE RASGULLA" coords="644,35,630,46,639,66,639,118,653,118,714,126,758,126,813,122,877,122,959,123,970,114,971,76,931,62,931,37,902,37" shape="poly">
+        <area target="" alt="HALDIRAMS ELAICHI RASGULLA" title="HALDIRAMS ELAICHI RASGULLA" href="/HALDIRAMS ELAICHI RASGULLA" coords="934,37,933,58,954,65,974,77,973,113,993,122,1014,121,1050,119,1068,119,1070,69,1070,37" shape="poly">
+        <area target="" alt="HALDIRAMS ZOR GARAM CHANA" title="HALDIRAMS ZOR GARAM CHANA" href="/HALDIRAMS ZOR GARAM CHANA" coords="2,186,1,238,34,241,93,245,127,244,129,214,126,179" shape="poly">
+        <area target="" alt="HALDIRAMS ALL IN ONE MIXTURE" title="HALDIRAMS ALL IN ONE MIXTURE" href="/HALDIRAMS ALL IN ONE MIXTURE" coords="131,139,134,234,261,239,258,145" shape="poly">
+        <area target="" alt="HALDIRAMS  ALOO BHUJIA" title="HALDIRAMS  ALOO BHUJIA" href="/HALDIRAMS  ALOO BHUJIA" coords="263,138,263,238,368,241,383,196,380,143" shape="poly">
+        <area target="" alt="HALDIRAMS KHATTA MEETA" title="HALDIRAMS KHATTA MEETA" href="/HALDIRAMS KHATTA MEETA" coords="394,157,388,187,378,232,419,233,457,233,518,233,530,233,538,206,539,176,534,153" shape="poly">
+        <area target="" alt="HALDIRAMS MIXTURE" title="HALDIRAMS MIXTURE" href="/HALDIRAMS MIXTURE" coords="545,145,558,235,689,239,703,151" shape="poly">
+        <area target="" alt="HALDIRAMS MOONG DAL" title="HALDIRAMS MOONG DAL" href="/HALDIRAMS MOONG DAL" coords="714,150,689,238,839,237,868,156" shape="poly">
+        <area target="" alt="HALDIRAMS CHATPATA DAL" title="HALDIRAMS CHATPATA DAL" href="/HALDIRAMS CHATPATA DAL" coords="866,176,874,238,989,230,984,170" shape="poly">
+        <area target="" alt="HALDIRAMS SWEET MIXTURE" title="HALDIRAMS SWEET MIXTURE" href="/HALDIRAMS SWEET MIXTURE" coords="995,176,1004,238,1069,232,1061,171" shape="poly">
+        <area target="" alt="HALDIRAMS NAVRATAN MIXTURE" title="HALDIRAMS NAVRATAN MIXTURE" href="/HALDIRAMS NAVRATAN MIXTURE" coords="48,270,14,282,2,344,134,344,137,277" shape="poly">
+        <area target="" alt="HALDIRAMS KHATA MEETA" title="HALDIRAMS KHATA MEETA" href="/HALDIRAMS KHATA MEETA" coords="144,269,132,350,274,349,290,312,274,279" shape="poly">
+        <area target="" alt="HALDIRAMS ALOO BHUJIA SMALL" title="HALDIRAMS ALOO BHUJIA SMALL" href="/HALDIRAMS ALOO BHUJIA SMALL" coords="287,274,285,346,376,347,431,346,425,321,421,277" shape="poly">
+        <area target="" alt="HALDIRAMS  DAL BHAJI" title="HALDIRAMS  DAL BHAJI" href="/HALDIRAMS  DAL BHAJI" coords="430,277,429,346,534,350,554,272" shape="poly">
+        <area target="" alt="HALDIRAMS CORNFLAKES MIXTURE" title="HALDIRAMS CORNFLAKES MIXTURE" href="/HALDIRAMS CORNFLAKES MIXTURE" coords="553,278,547,335,655,341,652,272" shape="poly">
+        <area target="" alt="HALDIRAMS  SPICY MIXTURE" title="HALDIRAMS  SPICY MIXTURE" href="/HALDIRAMS  SPICY MIXTURE" coords="659,271,661,339,778,347,766,274" shape="poly">
+        <area target="" alt="KRACK JACK BISCUIT SMALL" title="KRACK JACK BISCUIT SMALL" href="/KRACK JACK BISCUIT SMALL" coords="782,276,786,348,921,356,917,280" shape="poly">
+        <area target="" alt="LITTLE HEARTS" title="LITTLE HEARTS" href="/LITTLE HEARTS" coords="922,262,926,354,1072,346,1072,252" shape="poly">
+        <area target="" alt="SUNFEAST CREAM BISCUIT" title="SUNFEAST CREAM BISCUIT" href="/SUNFEAST CREAM BISCUIT" coords="81,374,34,405,32,446,50,451,159,448,164,423,194,385" shape="poly">
+        <area target="" alt="BRITANIA CREAM BISCUIT" title="BRITANIA CREAM BISCUIT" href="/BRITANIA CREAM BISCUIT" coords="209,387,177,406,166,451,242,451,234,414,256,387" shape="poly">
+        <area target="" alt="BRITANIA BLUE CREAM BISCUIT" title="BRITANIA BLUE CREAM BISCUIT" href="/BRITANIA BLUE CREAM BISCUIT" coords="275,386,239,403,242,424,241,445,289,453,346,453,353,430,356,397,378,377,298,370" shape="poly">
+        <area target="" alt="GOODAY BUTTER BISCUIT" title="GOODAY BUTTER BISCUIT" href="/GOODAY BUTTER BISCUIT" coords="380,389,358,423,354,449,477,451,473,428,474,401,476,385,426,382,403,382" shape="poly">
+        <area target="" alt="GOODAY ELAICHI BUTTER BISCUIT" title="GOODAY ELAICHI BUTTER BISCUIT" href="/GOODAY ELAICHI BUTTER BISCUIT" coords="498,384,478,426,479,447,601,453,594,380" shape="poly">
+        <area target="" alt="GOODAY ALMOND BUTTER BISCUIT" title="GOODAY ALMOND BUTTER BISCUIT" href="/GOODAY ALMOND BUTTER BISCUIT" coords="602,378,602,408,602,450,703,455,707,425,695,386,678,382,646,378" shape="poly">
+        <area target="" alt="PARLE 50 50" title="PARLE 50 50" href="/PARLE 50 50" coords="708,381,709,408,709,452,832,457,834,408,821,374" shape="poly">
+        <area target="" alt="SUNFEAST ELAICHI BISCUIT" title="SUNFEAST ELAICHI BISCUIT" href="/SUNFEAST ELAICHI BISCUIT" coords="891,380,834,380,838,459,941,457,924,395,910,372" shape="poly">
+        <area target="" alt="MONACO CREAM BISCUIT" title="MONACO CREAM BISCUIT" href="/MONACO CREAM BISCUIT" coords="943,449,1013,448,1009,422,1006,386,994,374,940,378,932,385,932,406,935,430" shape="poly">
+        <area target="" alt="MONACO BISCUIT" title="MONACO BISCUIT" href="/MONACO BISCUIT" coords="1066,379,1007,381,1014,452,1069,451,1070,410,1070,382" shape="poly">
+        <area target="" alt="HALDIRAMS SOAN PAPDI" title="HALDIRAMS SOAN PAPDI" href="/HALDIRAMS SOAN PAPDI" coords="161,472,110,515,105,565,242,562,251,511,270,477" shape="poly">
+        <area target="" alt="HALDIRAMS SOAN PAPDI ELAICHI BIG" title="/HALDIRAMS SOAN PAPDI ELAICHI BIG" href="HALDIRAMS SOAN PAPDI ELAICHI BIG" coords="287,474,255,507,241,564,383,572,386,522,400,509,402,480" shape="poly">
+        <area target="" alt="HALDIRAMS SOAN PAPDI ELAICHI SMALL" title="/HALDIRAMS SOAN PAPDI ELAICHI SMALL" href="HALDIRAMS SOAN PAPDI ELAICHI SMALL" coords="415,483,406,506,386,530,386,568,534,572,528,528,525,511,525,486,520,479,467,472" shape="poly">
+        <area target="" alt="HALDIRAMS MATHRI" title="HALDIRAMS MATHRI" href="/HALDIRAMS MATHRI" coords="548,472,529,506,536,558,540,572,581,568,658,568,648,535,649,504,650,475" shape="poly">
+        <area target="" alt="HALDIRAMS MINI SAMOSA" title="HALDIRAMS MINI SAMOSA" href="/HALDIRAMS MINI SAMOSA" coords="664,483,653,518,662,568,758,571,757,537,756,504,749,482" shape="poly">
+        <area target="" alt="HALDIRAMS BHELPURI BOX PACK" title="HALDIRAMS BHELPURI BOX PACK" href="/HALDIRAMS BHELPURI BOX PACK" coords="758,498,759,505,759,517,760,556,787,571,927,569,935,533,938,501,915,492,835,489,779,492" shape="poly">
+        <area target="" alt="HALDIRAMS BHELPURI COVER PACK" title="HALDIRAMS BHELPURI COVER PACK" href="/HALDIRAMS BHELPURI COVER PACK" coords="922,472,940,496,937,559,966,565,1072,569,1070,548,1072,508,1072,477" shape="poly">
+        <area target="" alt="RAJA BANANA CHIPS" title="RAJA BANANA CHIPS" href="/RAJA BANANA CHIPS" coords="207,582,205,652,373,650,392,592" shape="poly">
+        <area target="" alt="HALDIRAMS ALOO CHIPS" title="HALDIRAMS ALOO CHIPS" href="/HALDIRAMS ALOO CHIPS" coords="422,594,418,644,487,656,526,650,590,648,592,587" shape="poly">
+        <area target="" alt="HALDIRAMS SOYA CHIPS" title="HALDIRAMS SOYA CHIPS" href="/HALDIRAMS SOYA CHIPS" coords="598,592,603,655,662,656,670,599" shape="poly">
+        <area target="" alt="HALDIRAMS MURKULU" title="HALDIRAMS MURKULU" href="/HALDIRAMS MURKULU" coords="675,591,675,654,835,654,825,597" shape="poly">
+        <area target="" alt="PIZZA BASE" title="PIZZA BASE" href="PIZZA BASE.html" coords="829,594,834,651,1042,655,1021,592" shape="poly">
+
+
+
+        </map>
+
+        <div class="small-container cart-page">
+
+            {% if allitems|length==0 %}
+            <i>
+                <pre>       Your cart is empty...click on items to get added</pre>
+            </i>
+            {% else %}
+
+            <table class="myfixed">
+                <thead>
+                    <tr>
+                        <!-- <th width="10%">Sno</th> -->
+                        <th>Product</th>
+                        <th>Quantity</th>
+                        <th>Subtotal</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+
+                    {% for item in allitems %}
+                    <tr>
+                        <!-- <td width="10%">{{loop.index}}</td> -->
+                        <td>
+                            <div class="cart-info">
+                                <div>
+                                    <p>{{item.Product}}</p>
+                                    <small>Fresh {{item.Product}}</small>
+                                    <a href="/removesnacks/{{item.Product}}" type="button">Remove</a>
+                                </div>
+                            </div>
+                        </td>
+                        <td>
+                            <pre>      {{item.Quantity}}</pre>
+                        </td>
+                        <td>
+                            <pre>                    {{item.Subtotal}} rupees</pre>
+                        </td>
+                    </tr>
+                    {% endfor %}
+
+    </form>
+
+    </tbody>
+
+    <div class="total-price">
+        <table>
+
+
+            {% set totals = [] %}
+            {% for item in allitems %}
+
+            {% if totals.append(item.Subtotal) %}{% endif %}
+
+            {% endfor %}
+            <tr>
+                <td style="text-align: right">Subtotal</td>
+                <td style="padding-right:50px;">{{ '%0.2f' | format(totals | sum) }}</td>
+            </tr>
+
+            <tr>
+                <td style="text-align: right;">tax</td>
+                <td style="padding-right:50px;">5.00</td>
+            </tr>
+            <tr>
+                <td style="text-align: right;">total</td>
+                <td style="padding-right:50px;" name="totalpay">{{ '%0.2f' | format(totals | sum+5) }}</td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="/payment"><input style="font-size:15px;width:200px;margin-left: 130px;" type=button
+                            value='continue to payment'></a>
+                </td>
+
+            </tr>
+
+        </table>
+    </div>
+    </table>
+    {% endif %}
+    </div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+</body>
+
+</html>

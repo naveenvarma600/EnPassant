@@ -1,0 +1,331 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EnPassant-Meat</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <style>
+        body {
+            background-color: WhiteSmoke;
+        }
+
+        table {
+            width: 29.8%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
+        .cart-info {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        th {
+            text-align: left;
+            padding: 5px;
+            color: #fff;
+            background: #ff523b;
+            font-weight: normal;
+        }
+
+        td {
+            padding: 10px 5px;
+        }
+
+        td input {
+            width: 40px;
+            height: 30px;
+            padding: 5px;
+        }
+
+        td a {
+            color: #ff523b;
+            font-size: 12px;
+        }
+
+        .total-price {
+            text-align: right;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .total_price table {
+            border-top: 3px sloid #ff523b;
+            width: 100%;
+            max-width: 350px;
+        }
+
+        td:last-child {
+            text-align: right;
+        }
+
+        th:last-child {
+            text-align: right;
+        }
+
+        .myfixed {
+            width: 455.5px;
+            table-layout: fixed;
+        }
+
+        .myfixed tbody {
+            display: block;
+            width: 456px;
+            overflow: scroll;
+            height: 450px;
+
+        }
+
+        .myfixed thead th tr {
+            display: block;
+
+        }
+
+        .myfixed th td {
+            width: 400px;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <div class="container-fluid">
+                <div class="logo">
+                    <a style="color:white;" class="navbar-brand" href="/">En<em>Passant</em></a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/aboutus" style="color:white;margin-top: 8px;">About us</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" style="color:white;margin-top:7px" href="#"
+                                id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                SECTIONS
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="/fruitstore">Fruits</a></li>
+                                <li><a class="dropdown-item" href="/vegetablestore">Vegetables</a></li>
+                                <li><a class="dropdown-item" href="/bakery">Bakery</a></li>
+                                <li><a class="dropdown-item" href="/snacks">Snacks</a></li>
+                                <li><a class="dropdown-item" href="/dairy">Dairy</a></li>
+                                <li><a class="dropdown-item" href="/toiletries">Toiletires</a></li>
+                                <li><a class="dropdown-item" href="/chicken">Chicken</a></li>
+                                <li><a class="dropdown-item" href="/mutton">Mutton</a></li>
+                                <li><a class="dropdown-item" href="/fish">Fish</a></li>
+                                <!--<li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>-->
+                            </ul>
+                        </li>
+
+
+
+                        <form class="d-flex" style="width:700px">
+                            <input class="form-control me-2" style="margin-top:7px;" type="search" placeholder="Search"
+                                aria-label="Search" style="width:200%">
+                            <button class="btn btn-outline-light" style="margin-top:7px;" type="submit">Search</button>
+                        </form>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" style="color:white;margin-top:7px;margin-left: 200px;" href="#"
+                                tabindex="-1" aria-disabled="true">EnPassant,your searches end here :)</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </div>
+
+    <form action="/bakery" method="POST">
+
+        <img src="static/img/bakerybody.jpeg" align="left" usemap="#image-map" height=658.4px width=70%>
+
+
+
+        <map name="image-map">
+            <area target="" alt="strawberry cupcake" title="strawberry cupcake" href="/strawberry-cupcake"
+                coords="51,201,52,226,70,230,147,230,196,227,210,230,214,207,186,193,153,185,109,183,76,188,62,200"
+                shape="poly">
+            <area target="" alt="strawberry pastries" title="strawberry pastries" href="/strawberry-pastries"
+                coords="50,467,45,504,64,520,121,519,170,508,191,486,206,480,187,443" shape="poly">
+            <area target="" alt="butterscotch pastries" title="butterscotch pastries" href="/butterscotch-pastries"
+                coords="35,552,26,585,30,600,41,604,53,607,79,611,138,608,168,601,190,576,189,555,182,534,133,532,122,524,100,532,74,530,45,535"
+                shape="poly">
+            <area target="" alt="strawberry vanila pastries" title="strawberry vanila pastries"
+                href="/strawberry-vanila-pastries"
+                coords="358,472,354,526,383,536,408,540,435,540,471,539,517,528,506,487,506,468,498,440,470,452,430,448,386,455"
+                shape="poly">
+            <area target="" alt="strawberry cake" title="strawberry cake" href="/strawberry-cake"
+                coords="494,539,458,549,446,570,443,590,446,600,466,611,491,619,518,622,546,623,582,619,606,611,615,582,595,559,566,543,516,537"
+                shape="poly">
+            <area target="" alt="pistaachio pastry" title="pistaachio pastry" href="/pistaachio-pastry"
+                coords="285,569,282,589,290,597,306,607,316,608,370,611,401,607,414,591,421,573,410,552,326,539,309,544,291,552"
+                shape="poly">
+            <area target="" alt="croissants choclate" title="croissants choclate" href="/croissants-choclate"
+                coords="587,461,578,450,556,456,542,469,537,486,540,500,558,522,582,526,627,529,667,530,702,519,717,498,690,473,690,466"
+                shape="poly">
+            <area target="" alt="vanila butterscotch pastry" title="vanila butterscotch pastry"
+                href="/vanila-butterscotch-pastry"
+                coords="688,532,659,541,638,556,630,592,650,606,680,618,724,618,786,618,782,562,758,546" shape="poly">
+            <area target="" alt="rainbow sprinkled strawberry pastries" title="rainbow sprinkled strawberry pastries"
+                href="/rainbow-sprinkled-strawberry-pastries"
+                coords="812,474,776,489,759,506,765,524,795,526,814,534,848,534,882,533,902,521,900,504,881,485,848,475"
+                shape="poly">
+            <area target="" alt="pineapple pastries" title="pineapple pastries" href="/pineapple-pastries"
+                coords="950,538,917,540,896,550,884,584,916,606,933,613,971,626,998,626,1030,629,1054,623,1062,599,1056,576,1055,562,1034,544"
+                shape="poly">
+            <area target="" alt="sweet shot" title="sweet shot" href="/sweet-shot"
+                coords="284,334,270,353,326,365,358,365,386,362,427,358,443,354,433,333,384,306,373,282,344,276,345,311,346,330"
+                shape="poly">
+            <area target="" alt="chef vishwa's special french cookies" title="chef vishwa's special french cookies"
+                href="/chef-vishwa's-special-french-cookies"
+                coords="498,175,481,172,484,157,478,136,488,123,491,116,502,113,502,97,522,96,547,90,558,100,569,118,574,137,577,153,579,177"
+                shape="poly">
+            <area target="" alt="chef vishwa's special choco cheese shots"
+                title="chef vishwa's special choco cheese shots" href="/chef-vishwa's-special-choco-cheese-shots"
+                coords="498,347,490,338,470,341,466,365,462,373,481,386,514,395,558,396,610,386,624,371,615,348"
+                shape="poly">
+            <area target="" alt="croissant" title="croissant" href="/croissant"
+                coords="615,141,596,142,578,175,545,227,563,234,604,234,678,233,684,220,639,190,633,164,624,148"
+                shape="poly">
+            <area target="" alt="chocolate cup cake" title="chocolate cup cake" href="/chocolate-cup-cake"
+                coords="677,339,650,329,632,349,649,357,683,364,707,367,742,371,773,371,807,359,788,337" shape="poly">
+            <area target="" alt="chef vishwa's special blueberry pie" title="chef vishwa's special blueberry pie"
+                href="/chef-vishwa's-special-blueberry-pie" coords="758,186,732,186,702,213,701,230,732,233,783,233,850,233,858,210,806,185" shape="poly">
+            <area target="" alt="choco pie" title="choco pie" href="/choco-pie"
+                coords="807,166,790,178,808,180,823,187,856,193,897,193,913,181,914,162" shape="poly">
+            <area target="" alt="choco chip cake" title="choco chip cake" href="/choco-chip-cake"
+                coords="109,313,106,337,130,349,96,364,88,385,112,394,150,398,178,391,218,377,226,334,209,304"
+                shape="poly">
+            <area target="" alt="butterscotch cake" title="butterscotch cake" href="/butterscotch-cake"
+                coords="930,471,884,470,887,482,901,499,905,512,905,527,962,541,1026,531,1027,505,990,480" shape="poly">
+            <area target="" alt="rainbow sprinkled strawberry cupcake" title="rainbow sprinkled strawberry cupcake"
+                href="/rainbow-sprinkled-strawberry-cupcake" coords="1046,216,1019,194,950,177,904,190,872,216,871,239,1039,238" shape="poly">
+            <area target="" alt="chocolate doughnuts" title="chocolate doughnuts" href="/chocolate-doughnuts"
+                coords="402,232,439,244,532,255,548,230,526,206,438,203,411,218" shape="poly">
+            <area target="" alt="choco strawberry cupcake" title="choco strawberry cupcake" href="/choco-strawberry-cupcake"
+                coords="210,197,220,239,396,231,385,198" shape="poly">
+
+        </map>
+
+
+
+
+
+
+    </form>
+
+    </tbody>
+
+    
+    <div class="small-container cart-page">
+
+        {% if allitems|length==0 %}
+        <i>
+            <pre>       Your cart is empty...click on items to get added</pre>
+        </i>
+        {% else %}
+
+        <table class="myfixed">
+            <thead>
+                <tr>
+                    <!-- <th width="10%">Sno</th> -->
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+                {% for item in allitems %}
+                <tr>
+                    <!-- <td width="10%">{{loop.index}}</td> -->
+                    <td>
+                        <div class="cart-info">
+                            <div>
+                                <p>{{item.Product}}</p>
+                                <small>Fresh {{item.Product}}</small>
+                                <a href="/removebakery/{{item.Product}}" type="button">Remove</a>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <pre>      {{item.Quantity}}</pre>
+                    </td>
+                    <td>
+                        <pre>                    {{item.Subtotal}} rupees</pre>
+                    </td>
+                </tr>
+                {% endfor %}
+
+</form>
+
+</tbody>
+
+<div class="total-price">
+    <table>
+
+
+        {% set totals = [] %}
+        {% for item in allitems %}
+
+        {% if totals.append(item.Subtotal) %}{% endif %}
+
+        {% endfor %}
+        <tr>
+            <td style="text-align: right">Subtotal</td>
+            <td style="padding-right:50px;">{{ '%0.2f' | format(totals | sum) }}</td>
+        </tr>
+
+        <tr>
+            <td style="text-align: right;">tax</td>
+            <td style="padding-right:50px;">5.00</td>
+        </tr>
+        <tr>
+            <td style="text-align: right;">total</td>
+            <td style="padding-right:50px;" name="totalpay">{{ '%0.2f' | format(totals | sum+5) }}</td>
+        </tr>
+        <tr>
+            <td>
+                <a href="/payment"><input style="font-size:15px;width:200px;margin-left: 130px;" type=button
+                        value='continue to payment'></a>
+            </td>
+
+        </tr>
+
+    </table>
+</div>
+</table>
+{% endif %}
+</div>
+
+
+
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+    crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+</body>
+
+</html>

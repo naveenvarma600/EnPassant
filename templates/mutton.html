@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EnPassant-fruits</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <style>
+        body {
+            background-color: WhiteSmoke;
+        }
+
+        table {
+            width: 29.8%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
+        .cart-info {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        th {
+            text-align: left;
+            padding: 5px;
+            color: #fff;
+            background: #ff523b;
+            font-weight: normal;
+        }
+
+        td {
+            padding: 10px 5px;
+        }
+
+        td input {
+            width: 40px;
+            height: 30px;
+            padding: 5px;
+        }
+
+        td a {
+            color: #ff523b;
+            font-size: 12px;
+        }
+
+        .total-price {
+            text-align: right;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .total_price table {
+            border-top: 3px sloid #ff523b;
+            width: 100%;
+            max-width: 350px;
+        }
+
+        td:last-child {
+            text-align: right;
+        }
+
+        th:last-child {
+            text-align: right;
+        }
+        .myfixed{
+            width:455.5px;
+            table-layout: fixed;
+        }
+        .myfixed tbody{
+            display:block;
+            width:456px;
+            overflow:scroll;
+            height:450px;
+
+            }
+            .myfixed thead th tr{
+                display:block;
+
+            }
+            .myfixed th td{
+                width:400px;
+            }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <div class="container-fluid">
+                <div class="logo">
+                    <a style="color:white;" class="navbar-brand" href="/">En<em>Passant</em></a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/aboutus" style="color:white;margin-top: 8px;">About us</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" style="color:white;margin-top:7px" href="#" id="navbarDropdown"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                SECTIONS
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="/fruitstore">Fruits</a></li>
+                                <li><a class="dropdown-item" href="/vegetablestore">Vegetables</a></li>
+                                <li><a class="dropdown-item" href="/bakery">Bakery</a></li>
+                                <li><a class="dropdown-item" href="/snacks">Snacks</a></li>
+                                <li><a class="dropdown-item" href="/dairy">Dairy</a></li>
+                                <li><a class="dropdown-item" href="/toiletries">Toiletires</a></li>
+                                <li><a class="dropdown-item" href="/chicken">Chicken</a></li>
+                                <li><a class="dropdown-item" href="/mutton">Mutton</a></li>
+                                <li><a class="dropdown-item" href="/fish">Fish</a></li>
+                                <!--<li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>-->
+                            </ul>
+                        </li>
+
+
+
+                        <form class="d-flex" style="width:700px">
+                            <input class="form-control me-2" style="margin-top:7px;" type="search" placeholder="Search"
+                                aria-label="Search" style="width:200%">
+                            <button class="btn btn-outline-light" style="margin-top:7px;" type="submit">Search</button>
+                        </form>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" style="color:white;margin-top:7px;margin-left: 200px;" href="#"
+                                tabindex="-1" aria-disabled="true">EnPassant,your searches end here :)</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </div>
+    <img src="static/img/muttonbodyim.jpeg" align="left" usemap="#image-map" height=658.4px width=70%>
+
+
+
+  <map name="image-map">
+      <area target="" alt="neck" title="neck" href="/mutton neck" coords="239,105,182,131,212,197,265,172" shape="poly">
+      <area target="" alt="shoulder" title="shoulder" href="/shoulder" coords="214,200,218,240,204,276,202,296,204,327,197,353,166,422,138,452,138,471,153,478,160,475,175,457,191,442,204,425,222,404,215,425,200,445,186,472,167,502,170,510,198,510,209,491,222,481,236,458,255,440,270,420,279,416,290,400,298,394,305,394,328,394,330,399,358,400,371,397,366,387,358,352,344,302,345,282,344,255,345,230,344,192,308,184,287,184,273,171" shape="poly">
+      <area target="" alt="ribs" title="ribs" href="/ribs" coords="351,191,346,221,345,234,345,253,347,279,347,299,351,312,355,326,358,344,362,366,369,391,385,394,411,394,454,390,485,381,514,368,550,361,551,336,551,320,551,307,548,284,546,270,541,240,541,214,538,194,535,181" shape="poly">
+      <area target="" alt="legs" title="legs" href="/mutton legs" coords="695,193,698,210,695,224,692,239,689,263,688,283,682,298,678,309,697,313,705,323,718,329,734,344,753,356,758,360,768,374,771,383,786,393,835,435,886,488,934,550,948,548,950,532,957,526,971,518,961,464,940,455,922,436,907,413,900,396,886,370,880,356,870,321,867,287,852,271,847,258,847,246,818,224,756,203" shape="poly">
+      <area target="" alt="loin" title="loin" href="/loin" coords="538,182,542,198,544,220,543,240,550,268,554,286,554,299,554,321,554,340,554,353,574,348,622,329,648,321,664,319,677,309,682,288,686,269,689,252,693,192" shape="poly">
+      <area target="" alt="kidneys" title="kidneys" href="/kidneys" coords="646,422,627,415,611,413,604,396,592,396,586,406,582,421,579,434,585,446,603,454,595,459,579,472,582,490,592,504,606,506,610,495,630,492,644,489,669,494,690,501,704,489,725,493,733,493,706,482,718,480,698,466,695,458,675,462,650,462,637,458,622,459,612,451,618,444,630,444,643,451,663,450,678,435,683,438,698,438,718,470,728,452,686,407" shape="poly">
+      <area target="" alt="mutton full body" title="mutton full body" href="/mutton full body" coords="1000,13,984,29,999,57,1002,71,1015,72,1018,58,1054,55,1058,71,1072,71,1070,43,1062,19,1023,23" shape="poly">
+  </map>
+
+
+
+  <div class="small-container cart-page">
+
+    {% if allitems|length==0 %}
+    <i>
+        <pre>       Your cart is empty...click on items to get added</pre>
+    </i>
+    {% else %}
+
+    <table class="myfixed">
+        <thead>
+            <tr>
+                <!-- <th width="10%">Sno</th> -->
+                <th>Product</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+
+            </tr>
+        </thead>
+        <tbody>
+
+            {% for item in allitems %}
+            <tr>
+                <!-- <td width="10%">{{loop.index}}</td> -->
+                <td>
+                    <div class="cart-info">
+                        <div>
+                            <p>{{item.Product}}</p>
+                            <small>Fresh {{item.Product}}</small>
+                            <a href="/removemutton/{{item.Product}}" type="button">Remove</a>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <pre>      {{item.Quantity}}</pre>
+                </td>
+                <td>
+                    <pre>                    {{item.Subtotal}} rupees</pre>
+                </td>
+            </tr>
+            {% endfor %}
+
+</form>
+
+</tbody>
+
+<div class="total-price">
+<table>
+
+
+    {% set totals = [] %}
+    {% for item in allitems %}
+
+    {% if totals.append(item.Subtotal) %}{% endif %}
+
+    {% endfor %}
+    <tr>
+        <td style="text-align: right">Subtotal</td>
+        <td style="padding-right:50px;">{{ '%0.2f' | format(totals | sum) }}</td>
+    </tr>
+
+    <tr>
+        <td style="text-align: right;">tax</td>
+        <td style="padding-right:50px;">5.00</td>
+    </tr>
+    <tr>
+        <td style="text-align: right;">total</td>
+        <td style="padding-right:50px;" name="totalpay">{{ '%0.2f' | format(totals | sum+5) }}</td>
+    </tr>
+    <tr>
+        <td>
+            <a href="/payment"><input style="font-size:15px;width:200px;margin-left: 130px;" type=button
+                    value='continue to payment'></a>
+        </td>
+
+    </tr>
+
+</table>
+</div>
+</table>
+{% endif %}
+</div>
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+</body>
+
+</html>

@@ -1,0 +1,341 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>EnPassant-fruits</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+
+
+    <style>
+        body {
+            background-color: WhiteSmoke;
+        }
+
+        table {
+            width: 29.8%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
+        .cart-info {
+            display: flex;
+            flex-wrap: wrap;
+        }
+
+        th {
+            text-align: left;
+            padding: 5px;
+            color: #fff;
+            background: #ff523b;
+            font-weight: normal;
+        }
+
+        td {
+            padding: 10px 5px;
+        }
+
+        td input {
+            width: 40px;
+            height: 30px;
+            padding: 5px;
+        }
+
+        td a {
+            color: #ff523b;
+            font-size: 12px;
+        }
+
+        .total-price {
+            text-align: right;
+            display: flex;
+            justify-content: flex-end;
+        }
+
+        .total_price table {
+            border-top: 3px sloid #ff523b;
+            width: 100%;
+            max-width: 350px;
+        }
+
+        td:last-child {
+            text-align: right;
+        }
+
+        th:last-child {
+            text-align: right;
+        }
+
+        .myfixed {
+            width: 455.5px;
+            table-layout: fixed;
+        }
+
+        .myfixed tbody {
+            display: block;
+            width: 456px;
+            overflow: scroll;
+            height: 450px;
+
+        }
+
+        .myfixed thead th tr {
+            display: block;
+
+        }
+
+        .myfixed th td {
+            width: 400px;
+        }
+    </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+</head>
+
+<body>
+    <div>
+        <nav class="navbar navbar-expand-lg navbar-light bg-dark">
+            <div class="container-fluid">
+                <div class="logo">
+                    <a style="color:white;" class="navbar-brand" href="/">En<em>Passant</em></a>
+                </div>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="/aboutus" style="color:white;margin-top: 8px;">About us</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" style="color:white;margin-top:7px" href="#"
+                                id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                SECTIONS
+                            </a>
+                            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                <li><a class="dropdown-item" href="/fruitstore">Fruits</a></li>
+                                <li><a class="dropdown-item" href="/vegetablestore">Vegetables</a></li>
+                                <li><a class="dropdown-item" href="/bakery">Bakery</a></li>
+                                <li><a class="dropdown-item" href="/snacks">Snacks</a></li>
+                                <li><a class="dropdown-item" href="/dairy">Dairy</a></li>
+                                <li><a class="dropdown-item" href="/toiletries">Toiletires</a></li>
+                                <li><a class="dropdown-item" href="/chicken">Chicken</a></li>
+                                <li><a class="dropdown-item" href="/mutton">Mutton</a></li>
+                                <li><a class="dropdown-item" href="/fish">Fish</a></li>
+                                <!--<li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>-->
+                            </ul>
+                        </li>
+
+
+
+                        <form class="d-flex" style="width:700px">
+                            <input class="form-control me-2" style="margin-top:7px;" type="search" placeholder="Search"
+                                aria-label="Search" style="width:200%">
+                            <button class="btn btn-outline-light" style="margin-top:7px;" type="submit">Search</button>
+                        </form>
+                        <li class="nav-item">
+                            <a class="nav-link disabled" style="color:white;margin-top:7px;margin-left: 200px;" href="#"
+                                tabindex="-1" aria-disabled="true">EnPassant,your searches end here :)</a>
+                        </li>
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+    </div>
+    <form action="/vegetablestore" method="POST"></form>
+    <img src="static/img/vegestoreim.jpeg" align="left" usemap="#image-map" height=658.4px width=70%>
+
+    <map name="image-map">
+        <area target="" alt="TOMATOES" title="TOMATOES" href="/tomato"
+            coords="434,266,433,289,442,310,437,334,427,349,432,362,438,366,462,373,469,379,497,391,514,386,528,394,554,391,582,393,611,395,638,397,651,394,663,393,680,389,698,394,714,394,715,382,715,372,736,364,765,362,787,366,805,378,812,364,823,355,821,334,804,324,787,306,781,291,760,284,756,270,742,274,734,272,707,262,700,252,679,241,650,240,627,240,615,242,585,243,577,236,562,239,526,252,511,240,499,248,479,259,460,264"
+            shape="poly">
+        <area target="" alt="BIG TOMATOES" title="BIG TOMATOES" href="/bigtomato"
+            coords="100,559,87,561,74,574,60,587,52,599,36,604,20,612,8,627,8,639,20,649,35,651,45,655,103,656,140,653,164,653,188,654,229,654,262,654,280,639,292,619,295,601,267,579,275,558,276,550,263,540,265,527,263,511,252,511,244,515,241,521,237,537,227,543,219,543,212,548,202,553,191,553,177,556,164,555,149,553,141,550,129,557,113,555"
+            shape="poly">
+        <area target="" alt="CAULIFLOWER" title="CAULIFLOWER" href="/cauliflower"
+            coords="850,186,824,185,809,197,807,206,800,220,791,229,802,242,807,244,812,251,819,255,814,266,801,286,798,297,797,314,802,317,811,324,827,345,834,359,843,359,868,358,876,354,894,354,906,343,932,332,941,324,926,338,932,365,945,365,965,380,987,381,1018,382,1043,375,1060,352,1046,329,1030,321,1020,314,1018,298,1005,271,1000,255,1000,240,982,233,967,216,965,199,949,182,929,182,910,185,900,183,887,166,868,169,858,174"
+            shape="poly">
+        <area target="" alt="ginger" title="ginger" href="/ginger"
+            coords="379,265,406,277,425,285,435,324,423,348,393,343,370,331,359,325,341,341,335,321,334,296,359,273,373,265,379,265"
+            shape="poly">
+        <area target="" alt="YAM" title="YAM" href="/yam"
+            coords="740,368,722,375,721,390,722,407,727,427,736,475,735,485,735,499,754,492,777,476,787,463,795,467,797,477,810,479,840,475,829,450,814,427,810,412,808,401,784,376,774,371,756,367"
+            shape="poly">
+        <area target="" alt="LEMON" title="LEMON" href="/lemon"
+            coords="660,471,638,479,618,484,597,493,589,505,581,511,577,515,565,521,554,523,539,541,529,573,522,600,530,611,546,622,569,626,588,622,598,618,614,617,617,627,621,635,638,642,669,641,680,635,689,634,692,627,698,616,713,594,697,567,699,545,705,530,707,509,709,493,678,471"
+            shape="poly">
+        <area target="" alt="LEMON SMALL" title="LEMON SMALL" href="/lemonsmall"
+            coords="367,337,346,339,329,352,308,364,282,382,289,390,297,398,325,408,352,406,375,408,386,408,386,396,390,389,402,388,404,378,414,372,428,375,428,363,400,348,382,343"
+            shape="poly">
+        <area target="" alt="BANANA NOT RIPED" title="BANANA NOT RIPED" href="/nobanana"
+            coords="132,272,136,253,116,238,90,238,83,242,74,261,62,273,51,288,51,302,53,313,50,324,26,336,23,358,7,377,14,400,39,406,49,411,63,407,81,377,72,365,94,351,117,342,130,334,133,314,123,304,123,286"
+            shape="poly">
+        <area target="" alt="BRINJAL SMALL BLACK" title="BRINJAL SMALL BLACK" href="/sbbrinjal"
+            coords="55,426,34,410,14,396,2,402,2,431,2,477,0,568,2,575,24,572,67,547,74,559,78,550,78,530,78,520,81,512,80,490,97,485,114,448,119,436,96,433,76,430"
+            shape="poly">
+        <area target="" alt="MIRCHI SMALL" title="MIRCHI SMALL" href="/smirchi"
+            coords="86,521,81,546,79,558,125,552,149,548,168,546,204,550,231,538,240,512,254,505,270,494,270,480,255,465,257,443,258,430,232,429,215,419,191,419,166,419,135,434,114,445,106,466,94,484,86,495"
+            shape="poly">
+        <area target="" alt="BITTER GOURD" title="BITTER GOURD" href="/bittergourd"
+            coords="331,410,311,410,293,410,271,426,266,438,262,459,273,472,284,484,289,475,305,460,331,452,341,459,354,462,354,449,356,435,346,415"
+            shape="poly">
+        <area target="" alt="CLUSTER BEANS BIG" title="CLUSTER BEANS BIG" href="/cbbeans"
+            coords="333,458,311,469,306,486,281,509,290,529,283,559,285,586,299,592,322,593,315,519,329,517,359,527,356,551,371,585,374,566,397,541,421,545,422,521,426,497,445,484,403,471"
+            shape="poly">
+        <area target="" alt="CAPSICUM" title="CAPSICUM" href="/capsicum"
+            coords="423,552,401,545,383,556,378,572,366,584,350,560,350,538,348,526,325,526,315,534,329,575,322,593,299,602,298,622,288,650,310,654,358,657,398,656,454,657,446,599,443,590"
+            shape="poly">
+        <area target="" alt="BRINJAL SMALL WHITE" title="BRINJAL SMALL WHITE" href="/swbrinjal"
+            coords="501,488,470,489,432,495,428,515,426,537,435,556,446,593,446,613,464,623,499,616,506,601,520,619,522,602,521,579,528,561,530,550,533,535,541,527,521,514"
+            shape="poly">
+        <area target="" alt="BOTTLE GOURD SMALL" title="BOTTLE GOURD SMALL" href="/sbottlegourd"
+            coords="834,485,798,478,774,480,753,496,730,501,716,529,706,543,706,566,709,577,717,587,714,609,703,621,738,610,797,575,842,558,836,541,838,519,846,495"
+            shape="poly">
+        <area target="" alt="GAJAR" title="GAJAR" href="/gajar"
+            coords="1018,440,993,446,917,464,877,471,859,479,854,486,854,507,856,519,844,519,841,534,850,536,863,549,847,564,869,576,871,584,866,599,868,611,896,609,910,609,883,615,892,630,916,647,935,649,954,649,991,652,1045,652,1063,641,1068,617,1068,584,1068,556,1068,530,1068,480,1069,465,1044,451"
+            shape="poly">
+        <area target="" alt="BEANS" title="BEANS" href="/beans"
+            coords="900,359,854,360,823,360,810,384,822,412,830,440,850,461,902,460,930,452,984,440,970,411,954,381,934,366"
+            shape="poly">
+        <area target="" alt="CHILLI WARANGAL TYPE" title="CHILLI WARANGAL TYPE" href="/wtchilli"
+            coords="250,171,230,171,209,175,191,183,190,201,174,212,169,217,161,227,149,244,148,251,142,263,134,283,130,296,130,312,138,332,182,352,208,339,218,310,238,308,249,315,297,297,338,285,364,262,384,258,406,259,405,251,382,239,348,229,335,224,323,232,308,249,293,244,278,227,275,211,283,195,305,191,307,178,286,174,267,172"
+            shape="poly">
+        <area target="" alt="ORANGES" title="ORANGES" href="/orangesveg"
+            coords="144,340,106,344,89,357,83,374,77,397,66,418,82,428,127,435,151,420,181,409,180,381,177,358"
+            shape="poly">
+        <area target="" alt="KASHMIRI APPLES" title="KASHMIRI APPLES" href="/kapple"
+            coords="297,332,233,322,198,341,186,354,184,383,186,413,253,420,279,408,303,357" shape="poly">
+        <area target="" alt="BRINJAL BLACK LONG" title="BRINJAL BLACK LONG" href="/lbbrinjal"
+            coords="444,379,426,380,407,388,394,400,412,441,385,435,367,445,375,463,394,465,411,469,424,472,452,479,478,457,483,443,493,432,494,415,496,410"
+            shape="poly">
+        <area target="" alt="BRINJAL BLACK BIG" title="BRINJAL BLACK BIG" href="/lbbrinjal"
+            coords="1054,378,1014,390,967,390,980,427,986,436,1012,440,1060,447,1070,438,1072,401,1071,383"
+            shape="poly">
+        <area target="" alt="GINGER" title="GINGER" href="/ginger"
+            coords="546,398,528,398,503,418,491,440,459,482,467,489,495,488,512,498,514,505,532,509,555,525,585,519,590,500,598,490,635,484,651,474,670,466,646,438,611,398,587,393,559,393"
+            shape="poly">
+        <area target="" alt="KASHMIRI RED CHILLI" title="KASHMIRI RED CHILLI" href="/krchilli"
+            coords="710,399,683,393,627,400,628,412,649,435,667,452,678,471,703,482,713,488,727,480,730,447,716,416"
+            shape="poly">
+        <area target="" alt="GARLIC" title="GARLIC" href="/garlic"
+            coords="726,165,673,162,654,174,646,198,653,230,672,237,689,238,698,244,710,262,732,268,750,266,761,266,761,282,778,284,790,290,803,274,810,258,783,220,741,183"
+            shape="poly">
+        <area target="" alt="ONIONS" title="ONIONS" href="/onion"
+            coords="728,137,740,177,757,196,786,200,799,198,812,182,826,181,850,178,862,161,886,161,899,174,921,179,917,161,902,136,879,133,854,128,796,128,778,128,762,128,748,131"
+            shape="poly">
+        <area target="" alt="POTATOES" title="POTATOES" href="/potato"
+            coords="320,137,274,126,235,129,207,129,174,181,180,191,201,175,227,166,244,168,270,168,290,168,306,172,314,182,332,170,343,160,353,152,364,141"
+            shape="poly">
+        <area target="" alt="MALBERRIES" title="MALBERRIES" href="/malberries" coords="318,53,295,100,364,98,380,65"
+            shape="poly">
+        <area target="" alt="BEETROOT" title="BEETROOT" href="/beetroot"
+            coords="839,564,818,571,786,591,747,610,718,627,691,651,717,654,766,650,815,651,870,651,885,650,875,620,854,583"
+            shape="poly">
+        <area target="" alt="" title="" href="" coords="" shape="poly">
+    </map>
+
+    <div class="small-container cart-page">
+
+        {% if allitems|length==0 %}
+        <i>
+            <pre>       Your cart is empty...click on items to get added</pre>
+        </i>
+        {% else %}
+
+        <table class="myfixed">
+            <thead>
+                <tr>
+                    <!-- <th width="10%">Sno</th> -->
+                    <th>Product</th>
+                    <th>Quantity</th>
+                    <th>Subtotal</th>
+
+                </tr>
+            </thead>
+            <tbody>
+
+                {% for item in allitems %}
+                <tr>
+                    <!-- <td width="10%">{{loop.index}}</td> -->
+                    <td>
+                        <div class="cart-info">
+                            <div>
+                                <p>{{item.Product}}</p>
+                                <small>Fresh {{item.Product}}</small>
+                                <a href="/removevegetable/{{item.Product}}" type="button">Remove</a>
+                            </div>
+                        </div>
+                    </td>
+                    <td>
+                        <pre>      {{item.Quantity}}</pre>
+                    </td>
+                    <td>
+                        <pre>                    {{item.Subtotal}} rupees</pre>
+                    </td>
+                </tr>
+                {% endfor %}
+
+                </form>
+
+            </tbody>
+
+            <div class="total-price">
+                <table>
+
+
+                    {% set totals = [] %}
+                    {% for item in allitems %}
+
+                    {% if totals.append(item.Subtotal) %}{% endif %}
+
+                    {% endfor %}
+                    <tr>
+                        <td style="text-align: right">Subtotal</td>
+                        <td style="padding-right:50px;">{{ '%0.2f' | format(totals | sum) }}</td>
+                    </tr>
+
+                    <tr>
+                        <td style="text-align: right;">tax</td>
+                        <td style="padding-right:50px;">5.00</td>
+                    </tr>
+                    <tr>
+                        <td style="text-align: right;">total</td>
+                        <td style="padding-right:50px;">{{ '%0.2f' | format(totals | sum+5) }}</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <a href="/payment"><input style="font-size:15px;width:200px;margin-left: 130px;" type=button
+                                    value='continue to payment'></a>
+                        </td>
+
+                    </tr>
+
+                </table>
+            </div>
+        </table>
+        {% endif %}
+    </div>
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+
+</body>
+
+</html>

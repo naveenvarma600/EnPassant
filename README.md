@@ -1,1 +1,1 @@
-# EnPassant
+EnPassant is an e-commerce website which gives people the experience of real mart virtually. It gives an first-class product display that makes people feel like they are in real marts. Enpassant strengthens the excitement of customers and also speeds up the buying process. Ultimately, our main aim is to create positive feeling for customers.
